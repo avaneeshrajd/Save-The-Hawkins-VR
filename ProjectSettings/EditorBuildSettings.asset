@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Home.unity
+    guid: bd8dd264d30054a159774a42da8a10ef
+  - enabled: 1
+    path: Assets/Scenes/Hawkin City.unity
+    guid: 01bfb0bab466d469984e43f7de211cd3
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 1729e6e16634f498a94b20997c3a7b01, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 88697d6ab2e194a998100aaf42c1e8bb, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 5ad09c24a68434fde85b6573b1c7c041, type: 2}
+  m_UseUCBPForAssetBundles: 0

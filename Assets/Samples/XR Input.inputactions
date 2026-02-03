@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "XR Input",
+    "maps": [
+        {
+            "name": "XRI RightHand",
+            "id": "75e0d0ab-4cab-489b-9996-79366cce2c49",
+            "actions": [
+                {
+                    "name": "Shoot",
+                    "type": "Button",
+                    "id": "b2a1b24c-ab91-43e7-bc02-7cdc526cc516",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4a4e5b2e-e5e1-4358-8365-48aa0376301a",
+                    "path": "<XRController>{RightHand}/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

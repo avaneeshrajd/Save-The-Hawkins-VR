@@ -1,0 +1,3484 @@
+fileFormatVersion: 2
+guid: b7683e9e4efbe4586bed54aef6a9ec5f
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'demogorgon_ref_demogorgon_head1_skeleton|Destroy'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_RingART_01'
+      has translation animation that will be discarded.\n\t'joint_Jaw_T_ALT_01' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_T_ART_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_HipMaster_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|Fall'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_IndexALT_01'
+      has translation animation that will be discarded.\n\t'joint_FingerALT_01' has
+      translation animation that will be discarded.\n\t'joint_RingALT_01' has translation
+      animation that will be discarded.\n\t'joint_IndexART_01' has translation animation
+      that will be discarded.\n\t'joint_FingerART_01' has translation animation that
+      will be discarded.\n\t'joint_RingART_01' has translation animation that will
+      be discarded.\n\t'joint_PinkyART_01' has translation animation that will be
+      discarded.\n\t'joint_HipMaster_01' is inbetween humanoid transforms and has
+      rotation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|Fall_2'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_IndexALT_01'
+      has translation animation that will be discarded.\n\t'joint_FingerALT_01' has
+      translation animation that will be discarded.\n\t'joint_RingALT_01' has translation
+      animation that will be discarded.\n\t'joint_IndexART_01' has translation animation
+      that will be discarded.\n\t'joint_FingerART_01' has translation animation that
+      will be discarded.\n\t'joint_RingART_01' has translation animation that will
+      be discarded.\n\t'joint_PinkyART_01' has translation animation that will be
+      discarded.\n\t'joint_Jaw_T_ALT_01' is inbetween humanoid transforms and has
+      rotation animation that will be discarded.\n\t'joint_Jaw_T_ART_01' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'joint_HipMaster_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'demogorgon_ref_demogorgon_head1_skeleton|Hit' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'joint_IndexALT_01' has translation animation
+      that will be discarded.\n\t'joint_FingerALT_01' has translation animation that
+      will be discarded.\n\t'joint_RingALT_01' has translation animation that will
+      be discarded.\n\t'joint_PinkyALT_01' has translation animation that will be
+      discarded.\n\t'joint_IndexART_01' has translation animation that will be discarded.\n\t'joint_FingerART_01'
+      has translation animation that will be discarded.\n\t'joint_RingART_01' has
+      translation animation that will be discarded.\n\t'joint_PinkyART_01' has translation
+      animation that will be discarded.\n\t'joint_Jaw_T_ALT_01' has translation animation
+      that will be discarded.\n\t'joint_Jaw_T_ALT_01' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'joint_Jaw_T_ART_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_B_01'
+      has translation animation that will be discarded.\n\t'joint_HipMaster_01' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\t'joint_Toe_Middle_ALT_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|HitGesture'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_IndexALT_01'
+      has translation animation that will be discarded.\n\t'joint_FingerALT_01' has
+      translation animation that will be discarded.\n\t'joint_RingALT_01' has translation
+      animation that will be discarded.\n\t'joint_PinkyALT_01' has translation animation
+      that will be discarded.\n\t'joint_IndexART_01' has translation animation that
+      will be discarded.\n\t'joint_FingerART_01' has translation animation that will
+      be discarded.\n\t'joint_RingART_01' has translation animation that will be
+      discarded.\n\t'joint_PinkyART_01' has translation animation that will be discarded.\n\t'joint_Jaw_T_ALT_01'
+      has translation animation that will be discarded.\n\t'joint_Jaw_T_ALT_01' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_T_ART_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_B_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|HitSuccess'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_IndexALT_01'
+      has translation animation that will be discarded.\n\t'joint_FingerALT_01' has
+      translation animation that will be discarded.\n\t'joint_RingALT_01' has translation
+      animation that will be discarded.\n\t'joint_PinkyALT_01' has translation animation
+      that will be discarded.\n\t'joint_IndexART_01' has translation animation that
+      will be discarded.\n\t'joint_FingerART_01' has translation animation that will
+      be discarded.\n\t'joint_RingART_01' has translation animation that will be
+      discarded.\n\t'joint_PinkyART_01' has translation animation that will be discarded.\n\t'joint_Head_01'
+      has translation animation that will be discarded.\n\t'joint_Jaw_T_ALT_01' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_T_ART_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_B_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|Idle'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_Head_01'
+      has translation animation that will be discarded.\n\t'joint_Jaw_T_ART_01' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootLT_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|IdleHunt'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_IndexALT_01'
+      has translation animation that will be discarded.\n\t'joint_FingerALT_01' has
+      translation animation that will be discarded.\n\t'joint_RingALT_01' has translation
+      animation that will be discarded.\n\t'joint_PinkyALT_01' has translation animation
+      that will be discarded.\n\t'joint_IndexART_01' has translation animation that
+      will be discarded.\n\t'joint_FingerART_01' has translation animation that will
+      be discarded.\n\t'joint_RingART_01' has translation animation that will be
+      discarded.\n\t'joint_PinkyART_01' has translation animation that will be discarded.\n\t'joint_Jaw_T_ALT_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_T_ART_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'demogorgon_ref_demogorgon_head1_skeleton|Jump' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'joint_IndexALT_01' has translation animation
+      that will be discarded.\n\t'joint_FingerALT_01' has translation animation that
+      will be discarded.\n\t'joint_RingALT_01' has translation animation that will
+      be discarded.\n\t'joint_IndexART_01' has translation animation that will be
+      discarded.\n\t'joint_FingerART_01' has translation animation that will be discarded.\n\t'joint_RingART_01'
+      has translation animation that will be discarded.\n\t'joint_PinkyART_01' has
+      translation animation that will be discarded.\n\t'joint_HipMaster_01' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'demogorgon_ref_demogorgon_head1_skeleton|Jump_2' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'joint_IndexALT_01' has translation animation
+      that will be discarded.\n\t'joint_FingerALT_01' has translation animation that
+      will be discarded.\n\t'joint_RingALT_01' has translation animation that will
+      be discarded.\n\t'joint_IndexART_01' has translation animation that will be
+      discarded.\n\t'joint_FingerART_01' has translation animation that will be discarded.\n\t'joint_RingART_01'
+      has translation animation that will be discarded.\n\t'joint_PinkyART_01' has
+      translation animation that will be discarded.\n\t'joint_Jaw_T_ALT_01' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_T_ART_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_HipMaster_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'demogorgon_ref_demogorgon_head1_skeleton|Land' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'joint_IndexALT_01' has translation animation
+      that will be discarded.\n\t'joint_FingerALT_01' has translation animation that
+      will be discarded.\n\t'joint_RingALT_01' has translation animation that will
+      be discarded.\n\t'joint_PinkyALT_01' has translation animation that will be
+      discarded.\n\t'joint_ThumbART_01' has translation animation that will be discarded.\n\t'joint_IndexART_01'
+      has translation animation that will be discarded.\n\t'joint_FingerART_01' has
+      translation animation that will be discarded.\n\t'joint_RingART_01' has translation
+      animation that will be discarded.\n\t'joint_PinkyART_01' has translation animation
+      that will be discarded.\n\t'joint_Jaw_T_ALT_01' has translation animation that
+      will be discarded.\n\t'joint_Jaw_T_ALT_01' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'joint_Jaw_T_ART_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_B_01'
+      has translation animation that will be discarded.\n\t'joint_HipMaster_01' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_Toe_Middle_ART_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|Miss'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_IndexALT_01'
+      has translation animation that will be discarded.\n\t'joint_FingerALT_01' has
+      translation animation that will be discarded.\n\t'joint_RingALT_01' has translation
+      animation that will be discarded.\n\t'joint_PinkyALT_01' has translation animation
+      that will be discarded.\n\t'joint_IndexART_01' has translation animation that
+      will be discarded.\n\t'joint_FingerART_01' has translation animation that will
+      be discarded.\n\t'joint_RingART_01' has translation animation that will be
+      discarded.\n\t'joint_PinkyART_01' has translation animation that will be discarded.\n\t'joint_Jaw_T_ALT_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_T_ART_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_B_01'
+      has translation animation that will be discarded.\n\t'joint_HipMaster_01' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|Mori'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_TorsoB_01'
+      has translation animation that will be discarded.\n\t'joint_ThumbALT_01' has
+      translation animation that will be discarded.\n\t'joint_IndexALT_01' has translation
+      animation that will be discarded.\n\t'joint_FingerALT_01' has translation animation
+      that will be discarded.\n\t'joint_RingALT_01' has translation animation that
+      will be discarded.\n\t'joint_PinkyALT_01' has translation animation that will
+      be discarded.\n\t'joint_ThumbART_01' has translation animation that will be
+      discarded.\n\t'joint_IndexART_01' has translation animation that will be discarded.\n\t'joint_FingerART_01'
+      has translation animation that will be discarded.\n\t'joint_RingART_01' has
+      translation animation that will be discarded.\n\t'joint_PinkyART_01' has translation
+      animation that will be discarded.\n\t'joint_Jaw_T_ALT_01' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_T_ART_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_B_01'
+      has translation animation that will be discarded.\n\t'joint_HipMaster_01' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_Toe_Middle_ART_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\t'joint_Toe_Middle_ALT_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|PortalEnter'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_IndexALT_01'
+      has translation animation that will be discarded.\n\t'joint_ClavicleRT_01'
+      has translation animation that will be discarded.\n\t'joint_IndexART_01' has
+      translation animation that will be discarded.\n\t'joint_FingerART_01' has translation
+      animation that will be discarded.\n\t'joint_RingART_01' has translation animation
+      that will be discarded.\n\t'joint_Head_01' has translation animation that will
+      be discarded.\n\t'joint_Jaw_T_ALT_01' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\t'joint_Jaw_B_01' has translation
+      animation that will be discarded.\n\t'joint_HipMaster_01' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_Toe_Middle_ART_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|PortalExit'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_IndexALT_01'
+      has translation animation that will be discarded.\n\t'joint_FingerALT_01' has
+      translation animation that will be discarded.\n\t'joint_RingALT_01' has translation
+      animation that will be discarded.\n\t'joint_FingerART_01' has translation animation
+      that will be discarded.\n\t'joint_RingART_01' has translation animation that
+      will be discarded.\n\t'joint_Jaw_T_ALT_01' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'joint_Jaw_T_ART_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_HipMaster_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|PortalSet'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_IndexART_01'
+      has translation animation that will be discarded.\n\t'joint_FingerART_01' has
+      translation animation that will be discarded.\n\t'joint_RingART_01' has translation
+      animation that will be discarded.\n\t'joint_HipMaster_01' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_Toe_Middle_ART_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\t'joint_Toe_Middle_ALT_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|Pounce'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_TorsoB_01'
+      has translation animation that will be discarded.\n\t'joint_IndexALT_01' has
+      translation animation that will be discarded.\n\t'joint_FingerALT_01' has translation
+      animation that will be discarded.\n\t'joint_RingALT_01' has translation animation
+      that will be discarded.\n\t'joint_ThumbART_01' has translation animation that
+      will be discarded.\n\t'joint_IndexART_01' has translation animation that will
+      be discarded.\n\t'joint_FingerART_01' has translation animation that will be
+      discarded.\n\t'joint_RingART_01' has translation animation that will be discarded.\n\t'joint_PinkyART_01'
+      has translation animation that will be discarded.\n\t'joint_Jaw_T_ALT_01' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_T_ART_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_B_01'
+      has translation animation that will be discarded.\n\t'joint_HipMaster_01' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_Toe_Middle_ART_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\t'joint_Toe_Middle_ALT_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|PounceHit'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_IndexALT_01'
+      has translation animation that will be discarded.\n\t'joint_FingerALT_01' has
+      translation animation that will be discarded.\n\t'joint_RingALT_01' has translation
+      animation that will be discarded.\n\t'joint_PinkyALT_01' has translation animation
+      that will be discarded.\n\t'joint_IndexART_01' has translation animation that
+      will be discarded.\n\t'joint_FingerART_01' has translation animation that will
+      be discarded.\n\t'joint_RingART_01' has translation animation that will be
+      discarded.\n\t'joint_PinkyART_01' has translation animation that will be discarded.\n\t'joint_Jaw_T_ALT_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_T_ART_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_B_01'
+      has translation animation that will be discarded.\n\t'joint_HipMaster_01' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|PounceHitGesture'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_IndexALT_01'
+      has translation animation that will be discarded.\n\t'joint_FingerALT_01' has
+      translation animation that will be discarded.\n\t'joint_RingALT_01' has translation
+      animation that will be discarded.\n\t'joint_PinkyALT_01' has translation animation
+      that will be discarded.\n\t'joint_IndexART_01' has translation animation that
+      will be discarded.\n\t'joint_FingerART_01' has translation animation that will
+      be discarded.\n\t'joint_RingART_01' has translation animation that will be
+      discarded.\n\t'joint_PinkyART_01' has translation animation that will be discarded.\n\t'joint_Jaw_T_ALT_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_T_ART_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_B_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|PounceMiss'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_IndexALT_01'
+      has translation animation that will be discarded.\n\t'joint_FingerALT_01' has
+      translation animation that will be discarded.\n\t'joint_RingALT_01' has translation
+      animation that will be discarded.\n\t'joint_PinkyALT_01' has translation animation
+      that will be discarded.\n\t'joint_ThumbART_01' has translation animation that
+      will be discarded.\n\t'joint_IndexART_01' has translation animation that will
+      be discarded.\n\t'joint_FingerART_01' has translation animation that will be
+      discarded.\n\t'joint_RingART_01' has translation animation that will be discarded.\n\t'joint_PinkyART_01'
+      has translation animation that will be discarded.\n\t'joint_Jaw_T_ALT_01' has
+      translation animation that will be discarded.\n\t'joint_Jaw_T_ALT_01' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_T_ART_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_B_01'
+      has translation animation that will be discarded.\n\t'joint_HipMaster_01' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_Toe_Middle_ART_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|PounceMissGesture'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_IndexALT_01'
+      has translation animation that will be discarded.\n\t'joint_FingerALT_01' has
+      translation animation that will be discarded.\n\t'joint_RingALT_01' has translation
+      animation that will be discarded.\n\t'joint_PinkyALT_01' has translation animation
+      that will be discarded.\n\t'joint_ThumbART_01' has translation animation that
+      will be discarded.\n\t'joint_IndexART_01' has translation animation that will
+      be discarded.\n\t'joint_FingerART_01' has translation animation that will be
+      discarded.\n\t'joint_RingART_01' has translation animation that will be discarded.\n\t'joint_PinkyART_01'
+      has translation animation that will be discarded.\n\t'joint_Jaw_T_ALT_01' has
+      translation animation that will be discarded.\n\t'joint_Jaw_T_ALT_01' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_T_ART_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_B_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|Run'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_HipMaster_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_Toe_Middle_ART_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\t'joint_Toe_Middle_ALT_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|Run_2'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_HipMaster_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_Toe_Middle_ART_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\t'joint_Toe_Middle_ALT_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|Run_3'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_HipMaster_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_Toe_Middle_ART_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\t'joint_Toe_Middle_ALT_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|Run_4'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_HipMaster_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_Toe_Middle_ART_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\t'joint_Toe_Middle_ALT_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|Run_5'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_Head_01'
+      has translation animation that will be discarded.\n\t'joint_Jaw_T_ART_01' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootLT_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|Run_6'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_HipMaster_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_Toe_Middle_ART_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\t'joint_Toe_Middle_ALT_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|Run_7'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_HipMaster_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_Toe_Middle_ART_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\t'joint_Toe_Middle_ALT_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|Run_8'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_HipMaster_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_Toe_Middle_ART_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\t'joint_Toe_Middle_ALT_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|Run_9'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_HipMaster_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_Toe_Middle_ART_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\t'joint_Toe_Middle_ALT_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|RunHunt'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_HipMaster_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_Toe_Middle_ART_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\t'joint_Toe_Middle_ALT_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|RunHunt_2'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_HipMaster_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_Toe_Middle_ART_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\t'joint_Toe_Middle_ALT_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|RunHunt_3'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_HipMaster_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_Toe_Middle_ART_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\t'joint_Toe_Middle_ALT_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|RunHunt_4'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_HipMaster_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_Toe_Middle_ART_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\t'joint_Toe_Middle_ALT_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|RunHunt_5'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_IndexALT_01'
+      has translation animation that will be discarded.\n\t'joint_FingerALT_01' has
+      translation animation that will be discarded.\n\t'joint_RingALT_01' has translation
+      animation that will be discarded.\n\t'joint_PinkyALT_01' has translation animation
+      that will be discarded.\n\t'joint_IndexART_01' has translation animation that
+      will be discarded.\n\t'joint_FingerART_01' has translation animation that will
+      be discarded.\n\t'joint_RingART_01' has translation animation that will be
+      discarded.\n\t'joint_PinkyART_01' has translation animation that will be discarded.\n\t'joint_Jaw_T_ALT_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_T_ART_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'demogorgon_ref_demogorgon_head1_skeleton|RunHunt_6' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'joint_HipMaster_01' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_Toe_Middle_ART_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\t'joint_Toe_Middle_ALT_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|RunHunt_7'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_HipMaster_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_Toe_Middle_ART_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\t'joint_Toe_Middle_ALT_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|RunHunt_8'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_HipMaster_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_Toe_Middle_ART_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\t'joint_Toe_Middle_ALT_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|RunHunt_9'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_HipMaster_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_Toe_Middle_ART_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\t'joint_Toe_Middle_ALT_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|Search'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_RingART_01'
+      has translation animation that will be discarded.\n\t'joint_Jaw_T_ALT_01' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_T_BLT_01'
+      has translation animation that will be discarded.\n\t'joint_Jaw_T_ART_01' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_B_01'
+      has translation animation that will be discarded.\n\t'joint_HipMaster_01' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|SearchAttack'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_IndexART_01'
+      has translation animation that will be discarded.\n\t'joint_FingerART_01' has
+      translation animation that will be discarded.\n\t'joint_RingART_01' has translation
+      animation that will be discarded.\n\t'joint_Jaw_T_ALT_01' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_B_01'
+      has translation animation that will be discarded.\n\t'joint_HipMaster_01' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_Toe_Middle_ART_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|Stun'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_IndexALT_01'
+      has translation animation that will be discarded.\n\t'joint_FingerALT_01' has
+      translation animation that will be discarded.\n\t'joint_RingALT_01' has translation
+      animation that will be discarded.\n\t'joint_PinkyALT_01' has translation animation
+      that will be discarded.\n\t'joint_ThumbART_01' has translation animation that
+      will be discarded.\n\t'joint_IndexART_01' has translation animation that will
+      be discarded.\n\t'joint_FingerART_01' has translation animation that will be
+      discarded.\n\t'joint_RingART_01' has translation animation that will be discarded.\n\t'joint_PinkyART_01'
+      has translation animation that will be discarded.\n\t'joint_Jaw_T_ALT_01' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_T_ART_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_HipMaster_01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_Toe_Middle_ART_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\t'joint_Toe_Middle_ALT_01'
+      has translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|Swing'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_IndexALT_01'
+      has translation animation that will be discarded.\n\t'joint_FingerALT_01' has
+      translation animation that will be discarded.\n\t'joint_RingALT_01' has translation
+      animation that will be discarded.\n\t'joint_PinkyALT_01' has translation animation
+      that will be discarded.\n\t'joint_IndexART_01' has translation animation that
+      will be discarded.\n\t'joint_FingerART_01' has translation animation that will
+      be discarded.\n\t'joint_RingART_01' has translation animation that will be
+      discarded.\n\t'joint_PinkyART_01' has translation animation that will be discarded.\n\t'joint_Head_01'
+      has translation animation that will be discarded.\n\t'joint_Jaw_T_ALT_01' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_T_BLT_01'
+      has translation animation that will be discarded.\n\t'joint_Jaw_T_ART_01' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_B_01'
+      has translation animation that will be discarded.\n\t'joint_HipMaster_01' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'joint_FootRT_01'
+      has translation animation that will be discarded.\n\t'joint_FootLT_01' has
+      translation animation that will be discarded.\n\nClip 'demogorgon_ref_demogorgon_head1_skeleton|SwingGesture'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'joint_IndexALT_01'
+      has translation animation that will be discarded.\n\t'joint_IndexART_01' has
+      translation animation that will be discarded.\n\t'joint_FingerART_01' has translation
+      animation that will be discarded.\n\t'joint_RingART_01' has translation animation
+      that will be discarded.\n\t'joint_PinkyART_01' has translation animation that
+      will be discarded.\n\t'joint_Head_01' has translation animation that will be
+      discarded.\n\t'joint_Jaw_T_ALT_01' is inbetween humanoid transforms and has
+      rotation animation that will be discarded.\n\t'joint_Jaw_T_BLT_01' has translation
+      animation that will be discarded.\n\t'joint_Jaw_T_ART_01' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'joint_Jaw_B_01'
+      has translation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|Destroy
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|Destroy
+      internalID: 8635435287802020219
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|Fall
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|Fall
+      internalID: 2083118188736553142
+      firstFrame: 0
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|Fall_2
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|Fall_2
+      internalID: -2503471272879165912
+      firstFrame: 0
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|Hit
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|Hit
+      internalID: -4591726696317484477
+      firstFrame: 0
+      lastFrame: 87
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|HitGesture
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|HitGesture
+      internalID: 1504513532042382316
+      firstFrame: 0
+      lastFrame: 87
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|HitSuccess
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|HitSuccess
+      internalID: -8462347114807267587
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|Idle
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|Idle
+      internalID: -5355713376215739214
+      firstFrame: 0
+      lastFrame: 368
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|IdleHunt
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|IdleHunt
+      internalID: 4218801344732505010
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|Jump
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|Jump
+      internalID: -318303812611575319
+      firstFrame: 0
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|Jump_2
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|Jump_2
+      internalID: 840319632921418823
+      firstFrame: 0
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|Land
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|Land
+      internalID: 1085513815671465050
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|LookC
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|LookC
+      internalID: -8395425779755991891
+      firstFrame: 0
+      lastFrame: 0
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|LookD
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|LookD
+      internalID: -4044180980089833393
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|LookU
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|LookU
+      internalID: -6903569298408408934
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|Miss
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|Miss
+      internalID: -4393014367492011008
+      firstFrame: 0
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|Mori
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|Mori
+      internalID: 7304135783740982978
+      firstFrame: 0
+      lastFrame: 360
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|PortalEnter
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|PortalEnter
+      internalID: -992317560836873064
+      firstFrame: 0
+      lastFrame: 62
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|PortalExit
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|PortalExit
+      internalID: 5165704179314332668
+      firstFrame: 0
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|PortalSet
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|PortalSet
+      internalID: -1044637539235896695
+      firstFrame: 0
+      lastFrame: 56
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|Pounce
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|Pounce
+      internalID: 874685173312966973
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|PounceHit
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|PounceHit
+      internalID: -5195201114131582524
+      firstFrame: 0
+      lastFrame: 87
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|PounceHitGesture
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|PounceHitGesture
+      internalID: 5587546884190597340
+      firstFrame: 0
+      lastFrame: 87
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|PounceMiss
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|PounceMiss
+      internalID: 4183603278101014916
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|PounceMissGesture
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|PounceMissGesture
+      internalID: 7723841909126398505
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|ragdoll
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|ragdoll
+      internalID: 4700212250162107638
+      firstFrame: 0
+      lastFrame: 0
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|Run
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|Run
+      internalID: 21252841304067372
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|Run_2
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|Run_2
+      internalID: 4854540004322517783
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|Run_3
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|Run_3
+      internalID: 7085626703106221091
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|Run_4
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|Run_4
+      internalID: 3288611866055730117
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|Run_5
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|Run_5
+      internalID: 6844611382641522518
+      firstFrame: 0
+      lastFrame: 368
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|Run_6
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|Run_6
+      internalID: 8568423964126410108
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|Run_7
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|Run_7
+      internalID: -227644991950505256
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|Run_8
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|Run_8
+      internalID: 3749709428364205868
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|Run_9
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|Run_9
+      internalID: -5572808385514374894
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|RunHunt
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|RunHunt
+      internalID: -2404192822562005962
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|RunHunt_2
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|RunHunt_2
+      internalID: -8314700616708511194
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|RunHunt_3
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|RunHunt_3
+      internalID: 56484435155973502
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|RunHunt_4
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|RunHunt_4
+      internalID: 2754514137877494202
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|RunHunt_5
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|RunHunt_5
+      internalID: 2012465725232390328
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|RunHunt_6
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|RunHunt_6
+      internalID: -6719687438730503818
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|RunHunt_7
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|RunHunt_7
+      internalID: -607860290556347707
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|RunHunt_8
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|RunHunt_8
+      internalID: -2412387824851261333
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|RunHunt_9
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|RunHunt_9
+      internalID: 2790128028388454893
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|Search
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|Search
+      internalID: 8127974387643861849
+      firstFrame: 0
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|SearchAttack
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|SearchAttack
+      internalID: 2365273918925378870
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|Stun
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|Stun
+      internalID: -329711577462894719
+      firstFrame: 0
+      lastFrame: 95
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|Swing
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|Swing
+      internalID: 1431416711932918876
+      firstFrame: 0
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: demogorgon_ref_demogorgon_head1_skeleton|SwingGesture
+      takeName: demogorgon_ref_demogorgon_head1_skeleton|SwingGesture
+      internalID: -8510207086650224924
+      firstFrame: 0
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: joint_Pelvis_01
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_HipLT_01
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_HipRT_01
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_KneeLT_01
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_KneeRT_01
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_FootLT_01
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_FootRT_01
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_TorsoA_01
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_TorsoB_01
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_NeckA_01
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_Head_01
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_ClavicleLT_01
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_ClavicleRT_01
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_ShoulderLT_01
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_ShoulderRT_01
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_ElbowLT_01
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_ElbowRT_01
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_HandLT_01
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_HandRT_01
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_Toe_Middle_ALT_01
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_Toe_Middle_ART_01
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_Jaw_T_BLT_01
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_Jaw_T_BRT_01
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_Jaw_B_01
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_ThumbALT_01
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_ThumbBLT_01
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_ThumbCLT_01
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_IndexALT_01
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_IndexBLT_01
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_IndexCLT_01
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_FingerALT_01
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_FingerBLT_01
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_FingerCLT_01
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_RingALT_01
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_RingBLT_01
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_RingCLT_01
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_PinkyALT_01
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_PinkyBLT_01
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_PinkyCLT_01
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_ThumbART_01
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_ThumbBRT_01
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_ThumbCRT_01
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_IndexART_01
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_IndexBRT_01
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_IndexCRT_01
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_FingerART_01
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_FingerBRT_01
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_FingerCRT_01
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_RingART_01
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_RingBRT_01
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_RingCRT_01
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_PinkyART_01
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_PinkyBRT_01
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_PinkyCRT_01
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint_TorsoC_01
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Demogorgon(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: demogorgon_ref_demogorgon_head1.001
+      parentName: Demogorgon(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: demogorgon_ref_demogorgon_body1
+      parentName: Demogorgon(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: demogorgon_ref_demogorgon_arms1.001
+      parentName: Demogorgon(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: demogorgon_ref_demogorgon_head1_skeleton
+      parentName: Demogorgon(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: joint_Char
+      parentName: demogorgon_ref_demogorgon_head1_skeleton
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.70710665, y: 0.00000035355342, z: -0.00000035355353, w: 0.7071069}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: joint_Pelvis_01
+      parentName: joint_Char
+      position: {x: -0.0035938767, y: 0.47247833, z: -0.0862435}
+      rotation: {x: 0.0000007450581, y: 2.4442672e-12, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_TorsoA_01
+      parentName: joint_Pelvis_01
+      position: {x: -1.5807017e-11, y: 0.0054916423, z: -0.000054971584}
+      rotation: {x: 0.027734708, y: -0.7065626, z: -0.027734678, w: 0.70656276}
+      scale: {x: 1.0000001, y: 0.99999976, z: 1.0000002}
+    - name: joint_TorsoB_01
+      parentName: joint_TorsoA_01
+      position: {x: 0.00000001842156, y: 0.058332086, z: -0.00054690015}
+      rotation: {x: -0.000000033527613, y: -0.000000029802322, z: 0.0974912, w: 0.9952364}
+      scale: {x: 1.0000008, y: 1.0000002, z: 1.0000011}
+    - name: joint_TorsoC_01
+      parentName: joint_TorsoB_01
+      position: {x: 0.00000006432645, y: 0.0593837, z: -0.0000000045448543}
+      rotation: {x: 0.000000041902194, y: -0.000000005606175, z: 0.043721557, w: 0.9990438}
+      scale: {x: 1.0000005, y: 1, z: 1.0000011}
+    - name: joint_ClavicleLT_01
+      parentName: joint_TorsoC_01
+      position: {x: 0.020013904, y: 0.0847304, z: 0.031908337}
+      rotation: {x: -0.049971957, y: 0.67085445, z: 0.71790123, w: 0.17909487}
+      scale: {x: 1.0000006, y: 1.0000013, z: 1.0000011}
+    - name: joint_ShoulderLT_01
+      parentName: joint_ClavicleLT_01
+      position: {x: 0.000000041127205, y: 0.07750356, z: -0.00000069141385}
+      rotation: {x: 0.00056601403, y: -0.20487693, z: -0.1667392, w: -0.9644808}
+      scale: {x: 1.0000008, y: 1.0000004, z: 0.99999964}
+    - name: joint_ElbowLT_01
+      parentName: joint_ShoulderLT_01
+      position: {x: 0.00000014781952, y: 0.19630326, z: -0.00000042915343}
+      rotation: {x: -0.01387938, y: -0.00615075, z: -0.024058746, w: -0.9995953}
+      scale: {x: 0.99999934, y: 0.9999996, z: 0.9999996}
+    - name: joint_HandLT_01
+      parentName: joint_ElbowLT_01
+      position: {x: -0.0000007200241, y: 0.12803283, z: 0.00000032424927}
+      rotation: {x: -0.029100712, y: -0.05790242, z: -0.13460605, w: 0.98877794}
+      scale: {x: 1.0000011, y: 1.000003, z: 1}
+    - name: joint_ThumbALT_01
+      parentName: joint_HandLT_01
+      position: {x: -0.0124374125, y: 0.057649124, z: -0.010913236}
+      rotation: {x: 0.16143875, y: -0.18870798, z: -0.27369463, w: -0.9292029}
+      scale: {x: 1.0000029, y: 1.0000001, z: 1.0000002}
+    - name: joint_ThumbBLT_01
+      parentName: joint_ThumbALT_01
+      position: {x: 0.000000026226044, y: 0.035439454, z: 0.00000027656554}
+      rotation: {x: 0.021751024, y: -0.005306525, z: 0.03096388, w: -0.9992698}
+      scale: {x: 1.0000001, y: 1.0000017, z: 0.99999994}
+    - name: joint_ThumbCLT_01
+      parentName: joint_ThumbBLT_01
+      position: {x: 0.000000009536743, y: 0.042204387, z: 0.000000021457671}
+      rotation: {x: 0.0000060237917, y: 0.00000048521883, z: -0.036299773, w: 0.99934095}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1.0000004}
+    - name: joint_ThumbCLT_01_end
+      parentName: joint_ThumbCLT_01
+      position: {x: -0, y: 0.0031603638, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_IndexALT_01
+      parentName: joint_HandLT_01
+      position: {x: -0.024527932, y: 0.14625823, z: 0.006690898}
+      rotation: {x: 0.08240696, y: -0.66097367, z: 0.007903838, w: -0.7458287}
+      scale: {x: 0.9999994, y: 1.0000007, z: 1.0000011}
+    - name: joint_IndexBLT_01
+      parentName: joint_IndexALT_01
+      position: {x: -0.000000038146972, y: 0.029172577, z: -0.000000044703484}
+      rotation: {x: -0.0000046677865, y: 0.0000005364416, z: -0.0343393, w: 0.9994103}
+      scale: {x: 0.9999991, y: 1.0000026, z: 1.0000015}
+    - name: joint_IndexCLT_01
+      parentName: joint_IndexBLT_01
+      position: {x: 0.000000095367426, y: 0.040735073, z: 0.00000022470951}
+      rotation: {x: -0.000010097929, y: -0.0000025683303, z: -0.035090435, w: 0.9993842}
+      scale: {x: 0.9999991, y: 1.0000024, z: 1.000001}
+    - name: joint_IndexCLT_01_end
+      parentName: joint_IndexCLT_01
+      position: {x: -0, y: 0.003160363, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_FingerALT_01
+      parentName: joint_HandLT_01
+      position: {x: -0.002843387, y: 0.15224807, z: -0.00018687487}
+      rotation: {x: 0.07189715, y: -0.75979537, z: 0.040763248, w: -0.6448876}
+      scale: {x: 0.9999993, y: 1.0000006, z: 1.000001}
+    - name: joint_FingerBLT_01
+      parentName: joint_FingerALT_01
+      position: {x: -0.00000009059906, y: 0.033478037, z: -0.00000022649765}
+      rotation: {x: -0.000007849184, y: -0.0000021755689, z: -0.034105096, w: 0.9994183}
+      scale: {x: 0.9999987, y: 1.000002, z: 1.0000008}
+    - name: joint_FingerCLT_01
+      parentName: joint_FingerBLT_01
+      position: {x: -0.0000000756979, y: 0.038234055, z: 0.00000041365624}
+      rotation: {x: 0.0000024128383, y: -0.0000068474833, z: -0.025181267, w: 0.9996829}
+      scale: {x: 0.99999857, y: 1.0000043, z: 1.0000018}
+    - name: joint_FingerCLT_01_end
+      parentName: joint_FingerCLT_01
+      position: {x: -0, y: 0.0031603586, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_RingALT_01
+      parentName: joint_HandLT_01
+      position: {x: 0.010986366, y: 0.14688796, z: -0.009143188}
+      rotation: {x: -0.05437096, y: -0.867564, z: 0.04828228, w: -0.49198115}
+      scale: {x: 0.9999991, y: 1.000001, z: 1.0000008}
+    - name: joint_RingBLT_01
+      parentName: joint_RingALT_01
+      position: {x: 0.000000038146972, y: 0.023297815, z: 0.000000007152557}
+      rotation: {x: -0.0000021941955, y: -0.00000047683704, z: -0.027422074, w: 0.999624}
+      scale: {x: 1.0000001, y: 1.0000023, z: 1.0000026}
+    - name: joint_RingCLT_01
+      parentName: joint_RingBLT_01
+      position: {x: -0.000000038146972, y: 0.017821738, z: 0.00000007867813}
+      rotation: {x: 0.000004171425, y: 0.00000033094375, z: -0.030829158, w: 0.99952465}
+      scale: {x: 0.99999815, y: 1.000001, z: 0.9999986}
+    - name: joint_RingCLT_01_end
+      parentName: joint_RingCLT_01
+      position: {x: -0, y: 0.0031603654, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_PinkyALT_01
+      parentName: joint_HandLT_01
+      position: {x: 0.018676538, y: 0.11305065, z: -0.009520979}
+      rotation: {x: -0.042509947, y: -0.85537434, z: 0.04715703, w: -0.51410484}
+      scale: {x: 0.9999997, y: 1.0000014, z: 0.9999991}
+    - name: joint_PinkyBLT_01
+      parentName: joint_PinkyALT_01
+      position: {x: -0.00000012874602, y: 0.013209042, z: 0.000000019073486}
+      rotation: {x: 0.00559432, y: 0.033036496, z: -0.03362786, w: 0.99887264}
+      scale: {x: 0.9999993, y: 1.0000013, z: 1.0000002}
+    - name: joint_PinkyCLT_01
+      parentName: joint_PinkyBLT_01
+      position: {x: 0.00000004529953, y: 0.017021442, z: -0.000000026226044}
+      rotation: {x: -0.0000034463576, y: 0.000003989784, z: -0.035297763, w: 0.9993769}
+      scale: {x: 0.9999991, y: 1.0000013, z: 1}
+    - name: joint_PinkyCLT_01_end
+      parentName: joint_PinkyCLT_01
+      position: {x: -0, y: 0.0031603803, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_ExtraWrist01LT_01
+      parentName: joint_HandLT_01
+      position: {x: -0.004282243, y: 0.06054686, z: -0.0055419705}
+      rotation: {x: -0.041289855, y: 0.04371844, z: 0.008979767, w: 0.9981499}
+      scale: {x: 1.0000007, y: 0.9999998, z: 0.99999994}
+    - name: joint_Index01LT_01
+      parentName: joint_ExtraWrist01LT_01
+      position: {x: -0.010064987, y: 0.041654695, z: 0.005963232}
+      rotation: {x: 0.004169348, y: -0.7148623, z: -0.0026849022, w: -0.6992477}
+      scale: {x: 0.99999994, y: 1.0000017, z: 1.0000011}
+    - name: joint_Index01LT_01_end
+      parentName: joint_Index01LT_01
+      position: {x: -0, y: 0.0031603703, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_Finger01LT_01
+      parentName: joint_ExtraWrist01LT_01
+      position: {x: 0.00061004993, y: 0.04078599, z: 0.0077707386}
+      rotation: {x: -0.017253537, y: -0.7631445, z: -0.02026546, w: -0.6456796}
+      scale: {x: 1.0000002, y: 1.000001, z: 1.0000015}
+    - name: joint_Finger01LT_01_end
+      parentName: joint_Finger01LT_01
+      position: {x: -0, y: 0.003160355, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_Ring01LT_01
+      parentName: joint_ExtraWrist01LT_01
+      position: {x: 0.011235169, y: 0.039595783, z: 0.004235878}
+      rotation: {x: -0.060023904, y: -0.7571531, z: 0.0007305815, w: -0.6504736}
+      scale: {x: 1.0000002, y: 1.0000014, z: 1.0000019}
+    - name: joint_Ring01LT_01_end
+      parentName: joint_Ring01LT_01
+      position: {x: -0, y: 0.0031603766, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_Pinky01LT_01
+      parentName: joint_ExtraWrist01LT_01
+      position: {x: 0.017391806, y: 0.030939879, z: 0.0036888646}
+      rotation: {x: -0.10524196, y: -0.7668936, z: 0.057130154, w: -0.63050336}
+      scale: {x: 0.9999999, y: 1.0000013, z: 1.0000007}
+    - name: joint_Pinky01LT_01_end
+      parentName: joint_Pinky01LT_01
+      position: {x: -0, y: 0.0031603687, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_HandLT_Roll_01
+      parentName: joint_ElbowLT_01
+      position: {x: -0.0000007200241, y: 0.12803283, z: 0.00000032424927}
+      rotation: {x: -0.13052666, y: -0.06956643, z: -0.17635898, w: 0.97314996}
+      scale: {x: 0.9999998, y: 1.0000021, z: 1.0000001}
+    - name: joint_HandLT_Roll_01_end
+      parentName: joint_HandLT_Roll_01
+      position: {x: -0, y: 0.0031603547, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_ForArmLT_Roll_01
+      parentName: joint_ElbowLT_01
+      position: {x: -0.00000039100647, y: 0.064016424, z: 0.00000014781952}
+      rotation: {x: 0.0000002394026, y: -0.00001104008, z: -0.0000009833765, w: 1}
+      scale: {x: 1.0000008, y: 1.0000008, z: 1.0000011}
+    - name: joint_ForArmLT_Roll_01_end
+      parentName: joint_ForArmLT_Roll_01
+      position: {x: -0, y: 0.0031603642, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_ElbowLT_Roll_01
+      parentName: joint_ShoulderLT_01
+      position: {x: 0.00000014781952, y: 0.19630326, z: -0.00000042915343}
+      rotation: {x: 0.000012159345, y: -0.00001819804, z: -0.40398112, w: -0.9147673}
+      scale: {x: 0.99999934, y: 0.99999917, z: 0.9999997}
+    - name: joint_ElbowLT_Roll_01_end
+      parentName: joint_ElbowLT_Roll_01
+      position: {x: -0, y: 0.0031603642, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_ShoulderLT_Roll_01
+      parentName: joint_ClavicleLT_01
+      position: {x: 0.000000041127205, y: 0.07750356, z: -0.00000069141385}
+      rotation: {x: 0.5228562, y: -0.08422514, z: -0.21157075, w: -0.82144105}
+      scale: {x: 1.0000007, y: 1.0000004, z: 0.9999997}
+    - name: joint_ShoulderLT_Roll_01_end
+      parentName: joint_ShoulderLT_Roll_01
+      position: {x: -0, y: 0.0031603642, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_ClavicleRT_01
+      parentName: joint_TorsoC_01
+      position: {x: 0.020014048, y: 0.08473117, z: -0.03190836}
+      rotation: {x: 0.67085624, y: 0.049983073, z: -0.17908382, w: 0.7179016}
+      scale: {x: 1.000001, y: 1.000001, z: 1.0000011}
+    - name: joint_ShoulderRT_01
+      parentName: joint_ClavicleRT_01
+      position: {x: 0.000000024437904, y: -0.077503815, z: 0.0000033313036}
+      rotation: {x: 0.0006353554, y: 0.20513004, z: 0.16648816, w: 0.9644703}
+      scale: {x: 1.0000004, y: 0.9999994, z: 0.99999964}
+    - name: joint_ElbowRT_01
+      parentName: joint_ShoulderRT_01
+      position: {x: 0.000000538826, y: -0.19630207, z: 0.00047004936}
+      rotation: {x: 0.0126912445, y: 0.005613176, z: 0.023882555, w: 0.99961853}
+      scale: {x: 1.0000015, y: 0.99999917, z: 1.0000001}
+    - name: joint_HandRT_01
+      parentName: joint_ElbowRT_01
+      position: {x: 0.000039856433, y: -0.12803261, z: -0.000000085830685}
+      rotation: {x: -0.0054714545, y: -0.055011895, z: -0.12479596, w: 0.9906411}
+      scale: {x: 0.99999964, y: 1.0000014, z: 1.0000012}
+    - name: joint_ThumbART_01
+      parentName: joint_HandRT_01
+      position: {x: 0.012437949, y: -0.05764897, z: 0.010913004}
+      rotation: {x: -0.18142508, y: 0.1847126, z: 0.2828039, w: 0.9235736}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000001}
+    - name: joint_ThumbBRT_01
+      parentName: joint_ThumbART_01
+      position: {x: -0.000025224685, y: -0.035421938, z: 0.000010986626}
+      rotation: {x: -0.021941649, y: 0.005309981, z: -0.031304248, w: 0.99925494}
+      scale: {x: 0.99999964, y: 1.0000001, z: 0.9999995}
+    - name: joint_ThumbCRT_01
+      parentName: joint_ThumbBRT_01
+      position: {x: -0.0000019693375, y: -0.042205296, z: -0.00000054121017}
+      rotation: {x: -0.00008457498, y: 0.0000019828428, z: -1, w: -0.00001889245}
+      scale: {x: 1.0000007, y: 1.0000008, z: 1.0000011}
+    - name: joint_ThumbCRT_01_end
+      parentName: joint_ThumbCRT_01
+      position: {x: -0, y: 0.0031603684, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_IndexART_01
+      parentName: joint_HandRT_01
+      position: {x: 0.025935225, y: -0.14707834, z: 0.008192188}
+      rotation: {x: -0.11134004, y: 0.65820444, z: -0.017662443, w: 0.744351}
+      scale: {x: 0.99999976, y: 1.0000005, z: 1.0000004}
+    - name: joint_IndexBRT_01
+      parentName: joint_IndexART_01
+      position: {x: 0.0000003993511, y: -0.0291724, z: 0.00000056535004}
+      rotation: {x: -0.000009469682, y: 0.0000011920921, z: -0.034329724, w: 0.99941057}
+      scale: {x: 1.0000005, y: 0.9999995, z: 1.0000001}
+    - name: joint_IndexCRT_01
+      parentName: joint_IndexBRT_01
+      position: {x: 0.00000004887581, y: -0.040695738, z: 0.00000013947486}
+      rotation: {x: -0.00008348379, y: -0.000013289697, z: -1, w: -0.0000136904555}
+      scale: {x: 1.0000013, y: 0.99999976, z: 1.0000005}
+    - name: joint_IndexCRT_01_end
+      parentName: joint_IndexCRT_01
+      position: {x: -0, y: 0.0031603696, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_FingerART_01
+      parentName: joint_HandRT_01
+      position: {x: 0.0053444575, y: -0.15213071, z: 0.00897594}
+      rotation: {x: -0.09752394, y: 0.75729626, z: -0.058775693, w: 0.6430684}
+      scale: {x: 0.9999993, y: 0.99999994, z: 1.0000007}
+    - name: joint_FingerBRT_01
+      parentName: joint_FingerART_01
+      position: {x: -0.00000015497207, y: -0.033478234, z: 0.000000114440915}
+      rotation: {x: -0.0000054202933, y: -0.0000022053703, z: -0.034111444, w: 0.999418}
+      scale: {x: 1.0000005, y: 0.9999989, z: 1.0000004}
+    - name: joint_FingerCRT_01
+      parentName: joint_FingerBRT_01
+      position: {x: 0.00000039577483, y: -0.03823397, z: -0.0000001835823}
+      rotation: {x: 0.000024535795, y: 0.000009861611, z: -1, w: -0.0000003129321}
+      scale: {x: 1.0000014, y: 0.999999, z: 0.9999996}
+    - name: joint_FingerCRT_01_end
+      parentName: joint_FingerCRT_01
+      position: {x: -0, y: 0.00316036, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_RingART_01
+      parentName: joint_HandRT_01
+      position: {x: -0.019071545, y: -0.14544247, z: 0.01035398}
+      rotation: {x: 0.044114154, y: 0.86832005, z: -0.051350944, w: 0.49136284}
+      scale: {x: 0.9999996, y: 1.0000004, z: 1}
+    - name: joint_RingBRT_01
+      parentName: joint_RingART_01
+      position: {x: -0.00000032424927, y: -0.023297891, z: -0.000000114440915}
+      rotation: {x: -0.0000010747453, y: -0.0000011920919, z: -0.027431393, w: 0.9996237}
+      scale: {x: 0.9999996, y: 1.0000011, z: 1.0000006}
+    - name: joint_RingCRT_01
+      parentName: joint_RingBRT_01
+      position: {x: 0.00000027656554, y: -0.017821707, z: -0.000000038146972}
+      rotation: {x: 0.000007881607, y: 0.0000020926964, z: -1, w: 0.000019837153}
+      scale: {x: 1.0000014, y: 0.9999995, z: 1.0000005}
+    - name: joint_RingCRT_01_end
+      parentName: joint_RingCRT_01
+      position: {x: -0, y: 0.0031603554, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_PinkyART_01
+      parentName: joint_HandRT_01
+      position: {x: -0.02394925, y: -0.110511556, z: 0.012802114}
+      rotation: {x: 0.025611108, y: 0.85852396, z: -0.062443506, w: 0.5083124}
+      scale: {x: 0.9999998, y: 1.0000002, z: 0.9999999}
+    - name: joint_PinkyBRT_01
+      parentName: joint_PinkyART_01
+      position: {x: -0.00000006198883, y: -0.013208798, z: 0.0000003814697}
+      rotation: {x: 0.0055845617, y: 0.03303806, z: -0.03364, w: 0.9988722}
+      scale: {x: 0.9999997, y: 1.0000006, z: 0.99999976}
+    - name: joint_PinkyCRT_01
+      parentName: joint_PinkyBRT_01
+      position: {x: -0.000000021457671, y: -0.01702136, z: 0.00000009059906}
+      rotation: {x: 0.0000324527, y: -0.0000007181656, z: -1, w: -0.0000017745757}
+      scale: {x: 1.0000001, y: 0.9999993, z: 0.9999996}
+    - name: joint_PinkyCRT_01_end
+      parentName: joint_PinkyCRT_01
+      position: {x: -0, y: 0.0031603526, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_ExtraWrist01RT_01
+      parentName: joint_HandRT_01
+      position: {x: 0.0032031226, y: -0.060390633, z: 0.0056103515}
+      rotation: {x: -0.041288868, y: 0.043716587, z: 0.008984692, w: 0.99815005}
+      scale: {x: 1.0000014, y: 1.0000001, z: 1.0000002}
+    - name: joint_Index01RT_01
+      parentName: joint_ExtraWrist01RT_01
+      position: {x: 0.010067595, y: -0.04165241, z: -0.0059640883}
+      rotation: {x: 0.0007562653, y: 0.66173095, z: 0.0075983936, w: 0.7497026}
+      scale: {x: 1.0000008, y: 1.0000001, z: 1.0000007}
+    - name: joint_Index01RT_01_end
+      parentName: joint_Index01RT_01
+      position: {x: -0, y: 0.0031603638, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_Finger01RT_01
+      parentName: joint_ExtraWrist01RT_01
+      position: {x: -0.00060821295, y: -0.040784307, z: -0.0077711986}
+      rotation: {x: 0.017254222, y: 0.76314425, z: 0.02026874, w: 0.6456797}
+      scale: {x: 1.0000007, y: 1.0000001, z: 1.0000006}
+    - name: joint_Finger01RT_01_end
+      parentName: joint_Finger01RT_01
+      position: {x: -0, y: 0.0031603691, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_Ring01RT_01
+      parentName: joint_ExtraWrist01RT_01
+      position: {x: -0.011235056, y: -0.03959561, z: -0.004236317}
+      rotation: {x: 0.060027786, y: 0.75714755, z: -0.0007300412, w: 0.6504795}
+      scale: {x: 1.0000008, y: 1.0000005, z: 1.0000006}
+    - name: joint_Ring01RT_01_end
+      parentName: joint_Ring01RT_01
+      position: {x: -0, y: 0.0031603638, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_Pinky01RT_01
+      parentName: joint_ExtraWrist01RT_01
+      position: {x: -0.01739096, y: -0.030938732, z: -0.0036893534}
+      rotation: {x: 0.10524408, y: 0.7668904, z: -0.057128318, w: 0.6305071}
+      scale: {x: 1.0000002, y: 1.000001, z: 1.0000005}
+    - name: joint_Pinky01RT_01_end
+      parentName: joint_Pinky01RT_01
+      position: {x: -0, y: 0.0031603687, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_HandRT_Roll_01
+      parentName: joint_ElbowRT_01
+      position: {x: 0.00000077724457, y: -0.1280326, z: -0.00000006198883}
+      rotation: {x: -0.13053411, y: -0.06954914, z: -0.17636013, w: 0.97315}
+      scale: {x: 0.9999993, y: 1.0000019, z: 1.0000007}
+    - name: joint_HandRT_Roll_01_end
+      parentName: joint_HandRT_Roll_01
+      position: {x: -0, y: 0.003160363, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_ForArmRT_Roll_01
+      parentName: joint_ElbowRT_01
+      position: {x: 0.00000037550925, y: -0.06401628, z: -0.00000007867813}
+      rotation: {x: -0.0000011367995, y: 0.00000022917715, z: 0.0000010132931, w: 1}
+      scale: {x: 1.0000012, y: 1.000001, z: 1.0000012}
+    - name: joint_ForArmRT_Roll_01_end
+      parentName: joint_ForArmRT_Roll_01
+      position: {x: -0, y: 0.0031603642, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_ElbowRT_Roll_01
+      parentName: joint_ShoulderRT_01
+      position: {x: 0.0000005483627, y: -0.19630209, z: 0.0000013113022}
+      rotation: {x: -0.0000047683716, y: 0.0000032037497, z: 0.40397906, w: 0.9147683}
+      scale: {x: 1.000002, y: 0.99999934, z: 1.0000001}
+    - name: joint_ElbowRT_Roll_01_end
+      parentName: joint_ElbowRT_Roll_01
+      position: {x: -0, y: 0.0031603642, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_ShoulderRT_Roll_01
+      parentName: joint_ClavicleRT_01
+      position: {x: 0.000000024437904, y: -0.077503815, z: 0.0000033313036}
+      rotation: {x: -0.52285826, y: 0.0842133, z: 0.21156263, w: 0.8214431}
+      scale: {x: 1.0000006, y: 0.99999994, z: 0.99999946}
+    - name: joint_ShoulderRT_Roll_01_end
+      parentName: joint_ShoulderRT_Roll_01
+      position: {x: -0, y: 0.003160365, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_NeckA_01
+      parentName: joint_TorsoC_01
+      position: {x: -0.008562848, y: 0.123030394, z: -0.000000011324882}
+      rotation: {x: -0.000000004962146, y: 0.000000027082915, z: -0.3047888, w: 0.95241994}
+      scale: {x: 0.99999994, y: 1.0000006, z: 1.0000002}
+    - name: joint_Head_01
+      parentName: joint_NeckA_01
+      position: {x: 0.001981385, y: 0.05345491, z: -0.0002211782}
+      rotation: {x: 0.00017916512, y: 0.000037734775, z: 0.20608443, w: 0.9785343}
+      scale: {x: 1, y: 1.0000008, z: 1.0000004}
+    - name: joint_Jaw_T_ALT_01
+      parentName: joint_Head_01
+      position: {x: -0.004018379, y: 0.046775196, z: 0.046268232}
+      rotation: {x: 0.027233986, y: 0.26586983, z: 0.7263683, w: -0.6332145}
+      scale: {x: 0.99999934, y: 0.9999996, z: 0.9999997}
+    - name: joint_Jaw_T_BLT_01
+      parentName: joint_Jaw_T_ALT_01
+      position: {x: -0.00015623689, y: 0.01763333, z: -0.0012891149}
+      rotation: {x: -0.13110448, y: -0.000045314428, z: 0.000006195157, w: 0.99136853}
+      scale: {x: 1.0000012, y: 1.0000021, z: 1.0000007}
+    - name: joint_Jaw_T_CLT_01
+      parentName: joint_Jaw_T_BLT_01
+      position: {x: 0.00039042113, y: 0.033675514, z: 0.0031642031}
+      rotation: {x: -0.09808256, y: 0.000031834894, z: 0.00000013091311, w: 0.99517834}
+      scale: {x: 1.0000008, y: 1.0000004, z: 0.9999992}
+    - name: joint_Jaw_T_DLT_01
+      parentName: joint_Jaw_T_CLT_01
+      position: {x: 0.00000008277595, y: 0.040585306, z: 0.00000009000301}
+      rotation: {x: -0.032210045, y: 0.000018368126, z: 0.000005706673, w: 0.9994811}
+      scale: {x: 1.0000012, y: 1.0000017, z: 1.0000006}
+    - name: joint_Jaw_T_ELT_01
+      parentName: joint_Jaw_T_DLT_01
+      position: {x: -0.00000015430152, y: 0.017764706, z: 0.0013982008}
+      rotation: {x: 0.000000055879347, y: 0.0000021702251, z: 0.0000002489422, w: 1}
+      scale: {x: 1.0000001, y: 1.0000004, z: 0.99999994}
+    - name: joint_Jaw_T_ELT_01_end
+      parentName: joint_Jaw_T_ELT_01
+      position: {x: -0, y: 0.0031603673, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_Jaw_B_ALT_01
+      parentName: joint_Head_01
+      position: {x: -0.0042626387, y: 0.005830985, z: 0.024375364}
+      rotation: {x: 0.5267376, y: 0.10047013, z: -0.6559916, w: 0.53115755}
+      scale: {x: 1, y: 1.0000005, z: 0.9999996}
+    - name: joint_Jaw_B_BLT_01
+      parentName: joint_Jaw_B_ALT_01
+      position: {x: -0.008086023, y: 0.01954936, z: -0.003945181}
+      rotation: {x: -0.24742916, y: -0.009778536, z: 0.0036354656, w: 0.96884984}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+    - name: joint_Jaw_B_CLT_01
+      parentName: joint_Jaw_B_BLT_01
+      position: {x: -0.00000024199485, y: 0.03265667, z: -0.00000047683716}
+      rotation: {x: -0.089669175, y: 0.00008479691, z: -0.000010210554, w: 0.9959717}
+      scale: {x: 1.0000004, y: 1.0000012, z: 1.0000006}
+    - name: joint_Jaw_B_DLT_01
+      parentName: joint_Jaw_B_CLT_01
+      position: {x: 0.0000000628829, y: 0.042799443, z: -0.00000030629337}
+      rotation: {x: 0.028698113, y: -0.000051099025, z: 0.0000064007377, w: 0.9995882}
+      scale: {x: 0.9999997, y: 1.0000004, z: 1.0000006}
+    - name: joint_Jaw_B_ELT_01
+      parentName: joint_Jaw_B_DLT_01
+      position: {x: -0.0014700051, y: 0.015546529, z: 0.0000003325753}
+      rotation: {x: -0.000000014901158, y: 0.000005199147, z: 0.000000043679155, w: 1}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1}
+    - name: joint_Jaw_B_ELT_01_end
+      parentName: joint_Jaw_B_ELT_01
+      position: {x: -0, y: 0.0031603624, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_Jaw_T_ART_01
+      parentName: joint_Head_01
+      position: {x: -0.011883696, y: 0.06364208, z: -0.039769877}
+      rotation: {x: 0.03364683, y: 0.33535963, z: -0.65439624, w: 0.6768807}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.000001}
+    - name: joint_Jaw_T_BRT_01
+      parentName: joint_Jaw_T_ART_01
+      position: {x: 0.0000001168251, y: 0.032157276, z: -0.000000007152557}
+      rotation: {x: 0.18537748, y: 0.00077620137, z: 0.0040676417, w: 0.9826586}
+      scale: {x: 1, y: 1.000001, z: 0.99999976}
+    - name: joint_Jaw_T_CRT_01
+      parentName: joint_Jaw_T_BRT_01
+      position: {x: -0.00000007390976, y: 0.030652635, z: -0.00000017404555}
+      rotation: {x: 0.07320379, y: 0.0000058161677, z: -0.0000008374918, w: 0.9973171}
+      scale: {x: 1.0000004, y: 1.0000008, z: 1.0000011}
+    - name: joint_Jaw_T_DRT_01
+      parentName: joint_Jaw_T_CRT_01
+      position: {x: 0.00000012040138, y: 0.028237414, z: -0.00000015735625}
+      rotation: {x: -0.00000012665984, y: -0.000004419716, z: 0.00000019288588, w: 1}
+      scale: {x: 1.0000002, y: 1.0000014, z: 1.0000011}
+    - name: joint_Jaw_T_ERT_01
+      parentName: joint_Jaw_T_DRT_01
+      position: {x: -0.000000006556511, y: 0.018523242, z: 0.000000094175334}
+      rotation: {x: -0.0000000074501383, y: 0.0000029982891, z: -0.00000003179321, w: 1}
+      scale: {x: 1.0000006, y: 0.9999998, z: 1.0000008}
+    - name: joint_Jaw_T_ERT_01_end
+      parentName: joint_Jaw_T_ERT_01
+      position: {x: -0, y: 0.0031603642, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_Jaw_B_ART_01
+      parentName: joint_Head_01
+      position: {x: -0.007718807, y: 0.022812393, z: -0.031066384}
+      rotation: {x: 0.46746787, y: 0.055287067, z: 0.6507422, w: -0.5957784}
+      scale: {x: 1.000001, y: 1.0000005, z: 0.99999994}
+    - name: joint_Jaw_B_BRT_01
+      parentName: joint_Jaw_B_ART_01
+      position: {x: 0.00000025987626, y: 0.02112846, z: -0.00000013589859}
+      rotation: {x: 0.119316205, y: -0.0020635684, z: 0.017071193, w: 0.9927075}
+      scale: {x: 1.000001, y: 1.0000006, z: 1.0000004}
+    - name: joint_Jaw_B_CRT_01
+      parentName: joint_Jaw_B_BRT_01
+      position: {x: 0.00000021934508, y: 0.035772543, z: -0.00000019073485}
+      rotation: {x: 0.20941795, y: -0.0035975573, z: -0.016818797, w: 0.97767496}
+      scale: {x: 0.9999998, y: 1.0000012, z: 0.99999976}
+    - name: joint_Jaw_B_DRT_01
+      parentName: joint_Jaw_B_CRT_01
+      position: {x: -0.0000002503395, y: 0.038372163, z: 0.00000016927719}
+      rotation: {x: -0.00000026822082, y: -0.00000062049344, z: -0.00000006117623, w: 1}
+      scale: {x: 1.000002, y: 1.0000002, z: 1.0000014}
+    - name: joint_Jaw_B_ERT_01
+      parentName: joint_Jaw_B_DRT_01
+      position: {x: 0.0014127791, y: 0.020578142, z: 0.004882344}
+      rotation: {x: -0.000000014901184, y: 0.0000006817279, z: 0.00000003515761, w: 1}
+      scale: {x: 0.9999992, y: 1.0000001, z: 0.9999993}
+    - name: joint_Jaw_B_ERT_01_end
+      parentName: joint_Jaw_B_ERT_01
+      position: {x: -0, y: 0.003160366, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_Jaw_M_ART_01
+      parentName: joint_Head_01
+      position: {x: 0.014801565, y: 0.08993913, z: 0.00045002237}
+      rotation: {x: -0.00015734398, y: -0.000093950584, z: -0.5119757, w: 0.85899997}
+      scale: {x: 1.0000001, y: 0.9999994, z: 1.0000002}
+    - name: joint_Jaw_M_BRT_01
+      parentName: joint_Jaw_M_ART_01
+      position: {x: 0.00011704427, y: 0.018308487, z: 0.000000002980232}
+      rotation: {x: 0.00000007545167, y: 0.00000006845948, z: 0.28175822, w: -0.95948553}
+      scale: {x: 1.0000001, y: 1.0000006, z: 1.0000004}
+    - name: joint_Jaw_M_CRT_01
+      parentName: joint_Jaw_M_BRT_01
+      position: {x: 0.00000030737368, y: 0.020743387, z: -0.0000000077486035}
+      rotation: {x: -0.00000007645549, y: 0.00000018898153, z: -0.12178016, w: 0.9925571}
+      scale: {x: 1.0000007, y: 1.000001, z: 1.0000005}
+    - name: joint_Jaw_M_CRT_01_end
+      parentName: joint_Jaw_M_CRT_01
+      position: {x: -0, y: 0.003160364, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_Jaw_B_01
+      parentName: joint_Head_01
+      position: {x: 0.013475228, y: -0.0017973825, z: -0.003786498}
+      rotation: {x: 0.00012952027, y: 0.00012956127, z: 0.7071093, w: -0.7071043}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000004}
+    - name: joint_Jaw_B_01_end
+      parentName: joint_Jaw_B_01
+      position: {x: -0, y: 0.0031603621, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_Chain_Neck_01
+      parentName: joint_NeckA_01
+      position: {x: 0.00000020177724, y: 0.02149756, z: 0.000000002271572}
+      rotation: {x: -0.000000009347653, y: 0.00000006421456, z: 0.70710933, w: -0.70710427}
+      scale: {x: 1.000001, y: 1.0000015, z: 1.0000011}
+    - name: joint_Chain_Neck_02
+      parentName: joint_Chain_Neck_01
+      position: {x: -0.0048601357, y: 0.031384584, z: 0.07275925}
+      rotation: {x: 0.057123594, y: -0.15996476, z: 0.70193267, w: -0.6916927}
+      scale: {x: 0.9999998, y: 1.0000002, z: 0.99999994}
+    - name: joint_Chain_Neck_03
+      parentName: joint_Chain_Neck_02
+      position: {x: -0.040861435, y: -0.00021538495, z: -0.0020086195}
+      rotation: {x: -0.24227771, y: -0.00075946364, z: 0.3571474, w: -0.9020791}
+      scale: {x: 1.000001, y: 0.9999998, z: 0.9999994}
+    - name: joint_Chain_Neck_04
+      parentName: joint_Chain_Neck_03
+      position: {x: -0.038969126, y: 0.00000022649765, z: 0.0010210836}
+      rotation: {x: 0.00019961596, y: -0.03895975, z: 0.009502396, w: 0.99919564}
+      scale: {x: 1.0000007, y: 1.0000005, z: 1.0000006}
+    - name: joint_Chain_Neck_05
+      parentName: joint_Chain_Neck_04
+      position: {x: -0.04082162, y: -0.000000007152557, z: -0.000000035762785}
+      rotation: {x: 0.2226776, y: 0.012086478, z: -0.012550157, w: 0.9747364}
+      scale: {x: 1.0000006, y: 0.9999996, z: 1.0000005}
+    - name: joint_Chain_Neck_06
+      parentName: joint_Chain_Neck_05
+      position: {x: -0.045702513, y: -0.00000029563904, z: -0.00000025510786}
+      rotation: {x: 0.0036061248, y: -0.07699878, z: -0.117426656, w: 0.9900855}
+      scale: {x: 0.99999994, y: 0.99999964, z: 1.0000002}
+    - name: joint_Chain_Neck_07
+      parentName: joint_Chain_Neck_06
+      position: {x: -0.046645746, y: -0.00000009298324, z: 0.00004143834}
+      rotation: {x: -0.00000023795286, y: 0.025064955, z: -0.00000072391396, w: 0.9996859}
+      scale: {x: 1.0000005, y: 1.0000011, z: 1.0000001}
+    - name: joint_Chain_Neck_07_end
+      parentName: joint_Chain_Neck_07
+      position: {x: -0, y: 0.0031603624, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_ChainRing
+      parentName: joint_TorsoC_01
+      position: {x: 0.07697112, y: 0.021413814, z: 0.02685987}
+      rotation: {x: 0.17663497, y: 0.279297, z: -0.6709497, w: 0.6637921}
+      scale: {x: 1.0000005, y: 1.0000018, z: 1.0000015}
+    - name: joint_ChainClavFrontLT_01
+      parentName: joint_ChainRing
+      position: {x: -0.013784734, y: -0.0038925856, z: -0.0021309815}
+      rotation: {x: 0.26344892, y: 0.008522554, z: 0.2564207, w: 0.9299304}
+      scale: {x: 0.9999999, y: 0.99999833, z: 1.0000004}
+    - name: joint_ChainClavFrontLT_02
+      parentName: joint_ChainClavFrontLT_01
+      position: {x: -0.08773191, y: 0.0000007426739, z: 0.0000027489662}
+      rotation: {x: 0.000009417533, y: 0.000016621312, z: 0.24414378, w: 0.969739}
+      scale: {x: 0.9999992, y: 1.0000011, z: 1.0000005}
+    - name: joint_ChainClavFrontLT_02_end
+      parentName: joint_ChainClavFrontLT_02
+      position: {x: -0, y: 0.0031603659, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_ChainClavFrontRT_01
+      parentName: joint_ChainRing
+      position: {x: 0.034632195, y: 0.0059908186, z: -0.025854975}
+      rotation: {x: -0.022388143, y: 0.53891796, z: -0.14100407, w: -0.83017105}
+      scale: {x: 1.0000017, y: 0.99999934, z: 0.99999845}
+    - name: joint_ChainClavFrontRT_02
+      parentName: joint_ChainClavFrontRT_01
+      position: {x: -0.096141376, y: -0.00000035583972, z: 0.00000017326325}
+      rotation: {x: -0.0000016037375, y: -0.0000027120113, z: -0.23702219, w: -0.97150433}
+      scale: {x: 1.0000007, y: 1.0000015, z: 1.0000014}
+    - name: joint_ChainClavFrontRT_02_end
+      parentName: joint_ChainClavFrontRT_02
+      position: {x: -0, y: 0.0031603607, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_ChainDynamicRT_01
+      parentName: joint_ChainRing
+      position: {x: 0.046188205, y: 0.0067808633, z: -0.028687155}
+      rotation: {x: 0.50392306, y: 0.8151384, z: 0.22435662, w: -0.17684735}
+      scale: {x: 0.99999887, y: 1.000001, z: 1.0000004}
+    - name: joint_ChainDynamicRT_02
+      parentName: joint_ChainDynamicRT_01
+      position: {x: -0.12187897, y: 0.00000033080576, z: 0.00000092506406}
+      rotation: {x: -0.0000016540289, y: 0.000003516674, z: -0.62672645, w: -0.77923936}
+      scale: {x: 0.99999976, y: 1.0000017, z: 1.0000006}
+    - name: joint_ChainDynamicRT_02_end
+      parentName: joint_ChainDynamicRT_02
+      position: {x: -0, y: 0.0031603642, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_ChainDynamicLT_01
+      parentName: joint_TorsoC_01
+      position: {x: -0.11374431, y: 0.027011458, z: 0.022671096}
+      rotation: {x: 0.14059213, y: -0.3423386, z: -0.85795665, w: -0.35629863}
+      scale: {x: 1.0000004, y: 1.0000012, z: 1.0000007}
+    - name: joint_ChainDynamicLT_02
+      parentName: joint_ChainDynamicLT_01
+      position: {x: -0.12719034, y: -0.000000030994414, z: -0.00000040292738}
+      rotation: {x: -0.000010889021, y: 0.000006444751, z: -0.67336714, w: -0.73930824}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000004}
+    - name: joint_ChainDynamicLT_02_end
+      parentName: joint_ChainDynamicLT_02
+      position: {x: -0, y: 0.003160362, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_ChainClavBackRT_01
+      parentName: joint_TorsoC_01
+      position: {x: -0.11374424, y: 0.027011402, z: 0.0226711}
+      rotation: {x: 0.5530813, y: -0.7412066, z: 0.30665442, w: 0.22511582}
+      scale: {x: 1.0000013, y: 1.000001, z: 1.0000004}
+    - name: joint_ChainClavBackRT_02
+      parentName: joint_ChainClavBackRT_01
+      position: {x: -0.10862955, y: 0.00000053763387, z: -0.00000014483928}
+      rotation: {x: 0.0000022724269, y: 0.00000056624407, z: -0.37573233, w: -0.9267283}
+      scale: {x: 0.99999994, y: 1.0000004, z: 1.0000006}
+    - name: joint_ChainClavBackRT_02_end
+      parentName: joint_ChainClavBackRT_02
+      position: {x: -0, y: 0.0031603652, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_ChainBack_04
+      parentName: joint_TorsoC_01
+      position: {x: -0.11152288, y: 0.038614042, z: 0.0017007565}
+      rotation: {x: 0.5749532, y: -0.5146332, z: -0.60429955, w: 0.19850352}
+      scale: {x: 1.0000004, y: 1.0000012, z: 1.0000012}
+    - name: joint_ChainBack_05
+      parentName: joint_ChainBack_04
+      position: {x: -0.083669305, y: 0.0000011187792, z: 0.00000057816504}
+      rotation: {x: 0.000005461275, y: -0.34288585, z: -0.0000036358829, w: 0.9393771}
+      scale: {x: 0.99999857, y: 0.9999996, z: 1.0000004}
+    - name: joint_ChainBack_05_end
+      parentName: joint_ChainBack_05
+      position: {x: -0, y: 0.0031603603, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_ChainClavBackLT_01
+      parentName: joint_TorsoC_01
+      position: {x: -0.09046569, y: -0.012929538, z: 0.009020801}
+      rotation: {x: -0.71473247, y: 0.6596401, z: 0.14904854, w: 0.1783733}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000011}
+    - name: joint_ChainClavBackLT_02
+      parentName: joint_ChainClavBackLT_01
+      position: {x: -0.1105745, y: -0.0000011491775, z: -0.000000057220458}
+      rotation: {x: -0.0000009685754, y: -0.0000031702216, z: 0.4860051, w: 0.87395597}
+      scale: {x: 1.0000004, y: 1.000001, z: 0.9999997}
+    - name: joint_ChainClavBackLT_02_end
+      parentName: joint_ChainClavBackLT_02
+      position: {x: -0, y: 0.0031603654, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_ChainRT_01
+      parentName: joint_TorsoC_01
+      position: {x: -0.040425137, y: -0.063288756, z: -0.06506929}
+      rotation: {x: -0.7296751, y: 0.3380232, z: -0.009157903, w: 0.5943322}
+      scale: {x: 1.0000006, y: 1.0000014, z: 1.0000012}
+    - name: joint_ChainRT_02
+      parentName: joint_ChainRT_01
+      position: {x: -0.05178552, y: 0.0027584098, z: 0.0067420052}
+      rotation: {x: 0.034489, y: -0.043987457, z: 0.4187096, w: 0.90639836}
+      scale: {x: 0.999999, y: 1.0000013, z: 1.000001}
+    - name: joint_ChainRT_02_end
+      parentName: joint_ChainRT_02
+      position: {x: -0, y: 0.003160363, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_ChainLT_01
+      parentName: joint_TorsoB_01
+      position: {x: 0.062321823, y: -0.038604345, z: 0.028716896}
+      rotation: {x: 0.7496497, y: 0.00016741069, z: -0.29003313, w: 0.59490013}
+      scale: {x: 1.0000002, y: 1.0000007, z: 1.0000002}
+    - name: joint_ChainLT_02
+      parentName: joint_ChainLT_01
+      position: {x: -0.09917221, y: 0.000000057220458, z: 0.0000011849403}
+      rotation: {x: -0.0000037550926, y: -0.0000004927497, z: -0.5328334, w: -0.84622025}
+      scale: {x: 1.0000014, y: 0.99999994, z: 1.0000012}
+    - name: joint_ChainLT_02_end
+      parentName: joint_ChainLT_02
+      position: {x: -0, y: 0.003160365, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_ChainFront_01
+      parentName: joint_TorsoB_01
+      position: {x: 0.04148897, y: -0.032457262, z: -0.05650992}
+      rotation: {x: 0.083596684, y: 0.3197226, z: -0.7999912, w: 0.5008025}
+      scale: {x: 0.9999999, y: 0.9999998, z: 1.0000006}
+    - name: joint_ChainFront_02
+      parentName: joint_ChainFront_01
+      position: {x: -0.07104383, y: -0.0000000011920929, z: -0.0000005036639}
+      rotation: {x: 0.0000019818544, y: -0.000003799796, z: 0.26137418, w: 0.96523756}
+      scale: {x: 1.0000006, y: 1.0000004, z: 0.99999976}
+    - name: joint_ChainFront_02_end
+      parentName: joint_ChainFront_02
+      position: {x: -0, y: 0.003160361, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_ChainTorsoA
+      parentName: joint_TorsoB_01
+      position: {x: -0.011319443, y: -0.057223327, z: 8.9406965e-10}
+      rotation: {x: 0.00000002851877, y: -0.000000059541936, z: -0.09749099, w: 0.9952364}
+      scale: {x: 0.9999997, y: 0.9999998, z: 1.0000004}
+    - name: joint_ChainTorsoA_end
+      parentName: joint_ChainTorsoA
+      position: {x: -0, y: 0.0031603586, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_ChainBack_01
+      parentName: joint_TorsoB_01
+      position: {x: -0.07584138, y: 0.021058623, z: -0.04934162}
+      rotation: {x: 0.8574919, y: -0.12136881, z: -0.26258713, w: 0.4254706}
+      scale: {x: 0.9999998, y: 1.0000006, z: 1.0000006}
+    - name: joint_ChainBack_02
+      parentName: joint_ChainBack_01
+      position: {x: -0.056106947, y: -0.00000026464463, z: -0.0000006735325}
+      rotation: {x: -0.0000004172325, y: -0.5124859, z: 0.00000020861626, w: 0.8586957}
+      scale: {x: 1.000001, y: 1.0000024, z: 1.000002}
+    - name: joint_ChainBack_02_end
+      parentName: joint_ChainBack_02
+      position: {x: -0, y: 0.0031603642, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_HipMaster_01
+      parentName: joint_Pelvis_01
+      position: {x: 2.4629115e-10, y: 0.00000002058734, z: 0.000000041118415}
+      rotation: {x: -0.00000089406973, y: 0.000000005936015, z: -0.0000000017657031, w: 1}
+      scale: {x: 0.9999998, y: 0.9999998, z: 0.99999994}
+    - name: joint_HipRT_01
+      parentName: joint_HipMaster_01
+      position: {x: 0.047709826, y: -0.02031053, z: 0.0029514432}
+      rotation: {x: 0.03653954, y: -0.7061619, z: 0.042239144, w: 0.7058442}
+      scale: {x: 1, y: 0.9999994, z: 1.0000005}
+    - name: joint_KneeRT_01
+      parentName: joint_HipRT_01
+      position: {x: 0.01625376, y: -0.19217277, z: -0.0019004792}
+      rotation: {x: -0.00903461, y: -0.0016867521, z: -0.1574626, w: 0.9874822}
+      scale: {x: 1.0000007, y: 1.0000008, z: 1.0000005}
+    - name: joint_backLegRT_01
+      parentName: joint_KneeRT_01
+      position: {x: -0.015382311, y: -0.16597173, z: 0.0067021274}
+      rotation: {x: -0.011138601, y: 0.16256857, z: 0.19909239, w: 0.9663383}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1.0000006}
+    - name: joint_backLegRT_01_end
+      parentName: joint_backLegRT_01
+      position: {x: -0, y: 0.0031603624, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_FootRT_01
+      parentName: joint_KneeRT_01
+      position: {x: 0.10733138, y: -0.20793168, z: -0.010984834}
+      rotation: {x: -0.018471781, y: 0.17561083, z: 0.31296542, w: 0.9332054}
+      scale: {x: 1.0000007, y: 1.0000006, z: 1.0000005}
+    - name: joint_Toe_Index_ART_01
+      parentName: joint_FootRT_01
+      position: {x: 0.00725816, y: -0.0028381157, z: 0.026023688}
+      rotation: {x: 0.16890816, y: -0.1241622, z: -0.97739816, w: 0.027325854}
+      scale: {x: 1.0000008, y: 1.0000011, z: 1.0000007}
+    - name: joint_Toe_Index_BRT_01
+      parentName: joint_Toe_Index_ART_01
+      position: {x: 0.0005734822, y: 0.046093706, z: -0.0030331286}
+      rotation: {x: -0.0015723554, y: -0.012230961, z: -0.5300088, w: -0.8479024}
+      scale: {x: 1.0000008, y: 1, z: 1.0000005}
+    - name: joint_Toe_Index_CRT_01
+      parentName: joint_Toe_Index_BRT_01
+      position: {x: -0.0020780861, y: 0.034517374, z: -0.0017433396}
+      rotation: {x: 0.0040971693, y: 0.006104628, z: 0.025987254, w: -0.99963534}
+      scale: {x: 1.0000012, y: 1.0000004, z: 1.0000007}
+    - name: joint_Toe_Index_CRT_01_end
+      parentName: joint_Toe_Index_CRT_01
+      position: {x: -0, y: 0.00316036, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_Toe_Middle_ART_01
+      parentName: joint_FootRT_01
+      position: {x: 0.018515492, y: -0.0037274885, z: 0.004077774}
+      rotation: {x: 0.017226238, y: 0.004562412, z: 0.9957843, w: -0.08997818}
+      scale: {x: 1.0000005, y: 1.0000008, z: 1.0000001}
+    - name: joint_Toe_Middle_BRT_01
+      parentName: joint_Toe_Middle_ART_01
+      position: {x: -0.0007270521, y: 0.053406905, z: 0.002406732}
+      rotation: {x: 0.00000042095783, y: -0.000001796987, z: -0.5109283, w: -0.8596234}
+      scale: {x: 1.0000013, y: 1.0000008, z: 1.0000002}
+    - name: joint_Toe_Middle_CRT_01
+      parentName: joint_Toe_Middle_BRT_01
+      position: {x: 0.004861515, y: 0.04571495, z: -0.0015877901}
+      rotation: {x: 0.000000054763376, y: -0.0000036587758, z: -0.09739253, w: 0.99524605}
+      scale: {x: 0.99999976, y: 1, z: 1.0000002}
+    - name: joint_Toe_Middle_CRT_01_end
+      parentName: joint_Toe_Middle_CRT_01
+      position: {x: -0, y: 0.0031603687, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_Toe_Pinky_ART_01
+      parentName: joint_FootRT_01
+      position: {x: 0.007216284, y: -0.012410414, z: -0.020255413}
+      rotation: {x: 0.058240052, y: -0.02472806, z: 0.997887, w: -0.0147697665}
+      scale: {x: 1.0000008, y: 1.0000015, z: 1.0000008}
+    - name: joint_Toe_Pinky_BRT_01
+      parentName: joint_Toe_Pinky_ART_01
+      position: {x: -0.009199979, y: 0.045608982, z: -0.00044630218}
+      rotation: {x: -0.000015340745, y: -0.000011695549, z: -0.59648204, w: -0.80262643}
+      scale: {x: 1.0000006, y: 1.000001, z: 1.0000005}
+    - name: joint_Toe_Pinky_CRT_01
+      parentName: joint_Toe_Pinky_BRT_01
+      position: {x: 0.0048746406, y: 0.023793042, z: -0.00027435645}
+      rotation: {x: -0.000002849505, y: -0.000008480765, z: -0.19391915, w: 0.9810176}
+      scale: {x: 1.0000004, y: 0.9999995, z: 0.99999976}
+    - name: joint_Toe_Pinky_CRT_01_end
+      parentName: joint_Toe_Pinky_CRT_01
+      position: {x: -0, y: 0.0031603645, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_KneeRT_Roll_01
+      parentName: joint_HipRT_01
+      position: {x: 0.01625376, y: -0.19217277, z: -0.0019004792}
+      rotation: {x: 0.0000015981495, y: 0.0000019073486, z: -0.12543397, w: 0.99210197}
+      scale: {x: 1.0000011, y: 1.0000008, z: 1.000001}
+    - name: joint_KneeRT_Roll_01_end
+      parentName: joint_KneeRT_Roll_01
+      position: {x: -0, y: 0.0031603673, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_HipLT_01
+      parentName: joint_HipMaster_01
+      position: {x: -0.047709897, y: -0.020312624, z: 0.00295142}
+      rotation: {x: -0.70584947, y: 0.042154673, z: 0.70616627, w: 0.036452193}
+      scale: {x: 1.0000123, y: 0.99998933, z: 1.0000008}
+    - name: joint_KneeLT_Roll_01
+      parentName: joint_HipLT_01
+      position: {x: -0.016253073, y: 0.1921707, z: 0.0019011599}
+      rotation: {x: 0.00017762184, y: 0.000022690278, z: 0.12542991, w: -0.99210256}
+      scale: {x: 0.9999918, y: 1.0000105, z: 1.0000008}
+    - name: joint_KneeLT_Roll_01_end
+      parentName: joint_KneeLT_Roll_01
+      position: {x: -0, y: 0.003160379, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_KneeLT_01
+      parentName: joint_HipLT_01
+      position: {x: -0.016253073, y: 0.1921707, z: 0.0019011599}
+      rotation: {x: 0.0001776442, y: 0.000022661407, z: 0.12542994, w: -0.9921025}
+      scale: {x: 0.999981, y: 1.0000192, z: 1}
+    - name: joint_backLegLT_01
+      parentName: joint_KneeLT_01
+      position: {x: 0.0153825665, y: 0.16597074, z: -0.006701832}
+      rotation: {x: -0.0111311935, y: 0.16257413, z: 0.19908759, w: 0.96633846}
+      scale: {x: 0.99999344, y: 1.0000095, z: 1.0000001}
+    - name: joint_backLegLT_01_end
+      parentName: joint_backLegLT_01
+      position: {x: -0, y: 0.0031603633, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_FootLT_01
+      parentName: joint_KneeLT_01
+      position: {x: -0.06486674, y: 0.26879257, z: 0.004305333}
+      rotation: {x: -0.021820571, y: 0.17623156, z: 0.28100523, w: 0.94313437}
+      scale: {x: 0.99999124, y: 1.0000117, z: 0.9999983}
+    - name: joint_Toe_Index_ALT_01
+      parentName: joint_FootLT_01
+      position: {x: -0.008507576, y: 0.004087949, z: -0.026765674}
+      rotation: {x: 0.09128258, y: 0.16388597, z: -0.028440537, w: -0.98183507}
+      scale: {x: 0.9999957, y: 1.0000072, z: 1.0000004}
+    - name: joint_Toe_Index_BLT_01
+      parentName: joint_Toe_Index_ALT_01
+      position: {x: 0.00000000834465, y: 0.045999836, z: 0.000000006910413}
+      rotation: {x: -0.00007633118, y: 0.00011561808, z: -0.5585066, w: -0.82950014}
+      scale: {x: 0.99997824, y: 1.0000225, z: 1.000001}
+    - name: joint_Toe_Index_CLT_01
+      parentName: joint_Toe_Index_BLT_01
+      position: {x: 0.00000007085502, y: 0.034622956, z: -0.00000002546236}
+      rotation: {x: 0.0000059074982, y: -0.00014690567, z: 0.035667714, w: -0.9993637}
+      scale: {x: 0.9999978, y: 1.0000013, z: 0.99999994}
+    - name: joint_Toe_Index_CLT_01_end
+      parentName: joint_Toe_Index_CLT_01
+      position: {x: -0, y: 0.0031603645, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_Toe_Middle_ALT_01
+      parentName: joint_FootLT_01
+      position: {x: -0.019960344, y: 0.0038053016, z: -0.0038038825}
+      rotation: {x: -0.030416733, y: 0.051811267, z: 0.09605797, w: 0.9935609}
+      scale: {x: 0.99998957, y: 1.000012, z: 0.99999815}
+    - name: joint_Toe_Middle_BLT_01
+      parentName: joint_Toe_Middle_ALT_01
+      position: {x: -0.000000022649765, y: 0.05346573, z: -0.0000000032037495}
+      rotation: {x: 0.00016232203, y: -0.00006511806, z: 0.46001145, w: 0.887913}
+      scale: {x: 0.9999733, y: 1.0000288, z: 1.0000011}
+    - name: joint_Toe_Middle_CLT_01
+      parentName: joint_Toe_Middle_BLT_01
+      position: {x: -0.000000048577785, y: 0.045998707, z: 0.000000017881392}
+      rotation: {x: 0.0000017475829, y: 0.00000082503163, z: -0.08878271, w: 0.996051}
+      scale: {x: 1.0000036, y: 0.9999967, z: 1.0000007}
+    - name: joint_Toe_Middle_CLT_01_end
+      parentName: joint_Toe_Middle_CLT_01
+      position: {x: -0, y: 0.0031603621, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_Toe_Pinky_ALT_01
+      parentName: joint_FootLT_01
+      position: {x: -0.008935068, y: 0.012683584, z: 0.02068547}
+      rotation: {x: 0.029454898, y: 0.10526171, z: 0.11517894, w: 0.9873127}
+      scale: {x: 0.9999881, y: 1.0000112, z: 1.0000023}
+    - name: joint_Toe_Pinky_BLT_01
+      parentName: joint_Toe_Pinky_ALT_01
+      position: {x: -0.00000009596348, y: 0.04652945, z: 0.000000060936436}
+      rotation: {x: -0.032293502, y: -0.01510527, z: 0.42337388, w: 0.90525335}
+      scale: {x: 0.99997246, y: 1.0000294, z: 0.99999946}
+    - name: joint_Toe_Pinky_CLT_01
+      parentName: joint_Toe_Pinky_BLT_01
+      position: {x: -0.000000010430813, y: 0.024288038, z: 0.00000004219124}
+      rotation: {x: 0.00000014714894, y: -0.0000013243404, z: 0.014334858, w: 0.9998973}
+      scale: {x: 1.0000002, y: 1.000002, z: 1.0000014}
+    - name: joint_Toe_Pinky_CLT_01_end
+      parentName: joint_Toe_Pinky_CLT_01
+      position: {x: -0, y: 0.0031603638, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_Chain_KneeLT_01
+      parentName: joint_KneeLT_01
+      position: {x: 0.021314416, y: 0.14462137, z: -0.039466787}
+      rotation: {x: -0.6982646, y: 0.6101518, z: 0.19017948, w: -0.3224487}
+      scale: {x: 1.000007, y: 0.9999997, z: 0.99999505}
+    - name: joint_Chain_KneeLT_02
+      parentName: joint_Chain_KneeLT_01
+      position: {x: -0.03791384, y: -0.00050808064, z: -0.0022618296}
+      rotation: {x: 0.031128522, y: -0.0015626845, z: -0.049923413, w: 0.99826664}
+      scale: {x: 1.0000036, y: 0.9999983, z: 0.9999991}
+    - name: joint_Chain_KneeLT_02_end
+      parentName: joint_Chain_KneeLT_02
+      position: {x: -0, y: 0.003160364, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_HipLT_Roll_01
+      parentName: joint_HipMaster_01
+      position: {x: -0.047709897, y: -0.020312624, z: 0.00295142}
+      rotation: {x: -0.70584947, y: 0.042154614, z: 0.7061662, w: 0.036452282}
+      scale: {x: 1.0000037, y: 0.9999974, z: 1.0000005}
+    - name: joint_HipLT_Roll_01_end
+      parentName: joint_HipLT_Roll_01
+      position: {x: -0, y: 0.003160377, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint_HipRT_Roll_01
+      parentName: joint_HipMaster_01
+      position: {x: 0.047709815, y: -0.020310491, z: 0.002951436}
+      rotation: {x: 0.036540557, y: -0.706161, z: 0.04224025, w: 0.70584506}
+      scale: {x: 1.0000002, y: 0.9999999, z: 1.0000002}
+    - name: joint_HipRT_Roll_01_end
+      parentName: joint_HipRT_Roll_01
+      position: {x: -0, y: 0.0031603568, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
