@@ -5,7 +5,8 @@ public class VRGun : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
-    public float fireRate = 0.2f;
+    public float fireRate = 1.0f;
+    public float bulletSpeed = 40f;
 
     [Header("INPUT")]
     public InputActionReference shootAction;
@@ -35,10 +36,18 @@ public class VRGun : MonoBehaviour
     void Shoot()
     {
         if (Time.time < _nextFire) return;
-
         _nextFire = Time.time + fireRate;
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
-        Debug.Log("SHOT FIRED");
+        GameObject bullet = Instantiate(
+            bulletPrefab,
+            firePoint.position,
+            firePoint.rotation
+        );
+
+        Rigidbody rb = bullet.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.linearVelocity = firePoint.forward * bulletSpeed;
+        }
     }
 }
