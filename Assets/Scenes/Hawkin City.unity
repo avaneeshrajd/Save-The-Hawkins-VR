@@ -4595,7 +4595,7 @@ PrefabInstance:
     - target: {fileID: -7635826562936255635, guid: 4fd1807b3e25e4236ad8c202cf1ea9a1, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: -3490874654722886908, guid: cb44ea42dcf9740feaf70f4355c8ec65, type: 3}
+      objectReference: {fileID: -3490874654722886908, guid: 4fd1807b3e25e4236ad8c202cf1ea9a1, type: 3}
     - target: {fileID: -7635826562936255635, guid: 4fd1807b3e25e4236ad8c202cf1ea9a1, type: 3}
       propertyPath: 'm_Materials.Array.data[2]'
       value: 
@@ -8848,6 +8848,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1178791450436251564, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_RequestedTrackingOriginMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_Name
       value: XR Origin (XR Rig)
@@ -9475,7 +9479,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1235677990
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10075,7 +10079,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3960879644723491920, guid: 9c32f2e3b18a3a94fa0cb90a4ac1c2fd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4448447718370701034, guid: 9c32f2e3b18a3a94fa0cb90a4ac1c2fd, type: 3}
       propertyPath: m_LocalScale.x
@@ -10199,7 +10203,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7981648180778114327, guid: 9c32f2e3b18a3a94fa0cb90a4ac1c2fd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.628
+      value: -2.677
+      objectReference: {fileID: 0}
+    - target: {fileID: 7981648180778114327, guid: 9c32f2e3b18a3a94fa0cb90a4ac1c2fd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.375
       objectReference: {fileID: 0}
     - target: {fileID: 7981648180778114327, guid: 9c32f2e3b18a3a94fa0cb90a4ac1c2fd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10223,7 +10231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9166191692367435985, guid: 9c32f2e3b18a3a94fa0cb90a4ac1c2fd, type: 3}
       propertyPath: m_Convex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9166191692367435985, guid: 9c32f2e3b18a3a94fa0cb90a4ac1c2fd, type: 3}
       propertyPath: m_Enabled
@@ -10453,7 +10461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VRGun
   firePoint: {fileID: 1386568070}
-  bulletPrefab: {fileID: 8160668802974424453, guid: 22b846fb0efbf4471ab8335a4ea0f956, type: 3}
+  bulletPrefab: {fileID: 1659594352548949352, guid: 22b846fb0efbf4471ab8335a4ea0f956, type: 3}
   fireRate: 1
   bulletSpeed: 40
   shootAudio: {fileID: 1735740930}
