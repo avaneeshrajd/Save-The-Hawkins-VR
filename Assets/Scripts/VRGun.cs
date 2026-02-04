@@ -7,12 +7,16 @@ public class VRGun : MonoBehaviour
     public GameObject bulletPrefab;
     public float fireRate = 1.0f;
     public float bulletSpeed = 40f;
+    public AudioSource shootAudio;
+    
 
     [Header("INPUT")]
     public InputActionReference shootAction;
 
     float _nextFire;
 
+
+    
     void OnEnable()
     {
         if (shootAction != null)
@@ -29,6 +33,7 @@ public class VRGun : MonoBehaviour
     {
         if (shootAction !=null && shootAction.action.IsPressed())
         {
+            shootAudio.Play();
             Shoot();
         }
     }

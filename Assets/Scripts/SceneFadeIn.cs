@@ -8,6 +8,8 @@ public class SceneFadeIn : MonoBehaviour
     public TextMeshProUGUI enteringText;
     public float waitTime = 10f;
     public float fadeSpeed = 0.5f;
+    public GameObject gun;
+    public AudioSource gunEquip;
 
     void Start()
     {
@@ -31,5 +33,8 @@ public class SceneFadeIn : MonoBehaviour
         }
 
         fadeCanvas.alpha = 0;
+        gun.SetActive(true);
+        gunEquip.Play();
+        
     }
 }
