@@ -5,43 +5,32 @@ public class VRGun : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
-    public float fireRate = 1.0f;
     public float bulletSpeed = 40f;
-    public AudioSource shootAudio;
-    
+    public AudioSource shotSound;
 
-    [Header("INPUT")]
     public InputActionReference shootAction;
 
-    float _nextFire;
-
-
-    
     void OnEnable()
     {
-        if (shootAction != null)
-            shootAction.action.Enable();
+        shootAction.action.performed += OnShoot;
+        shootAction.action.Enable();
     }
 
     void OnDisable()
     {
-        if (shootAction != null)
-            shootAction.action.Disable();
+        shootAction.action.performed -= OnShoot;
+        shootAction.action.Disable();
     }
 
-    void Update()
+    void OnShoot(InputAction.CallbackContext ctx)
     {
-        if (shootAction !=null && shootAction.action.IsPressed())
-        {
-            shootAudio.Play();
-            Shoot();
-        }
+        Shoot();
+        shotSound.Play();
     }
 
     void Shoot()
     {
-        if (Time.time < _nextFire) return;
-        _nextFire = Time.time + fireRate;
+        Debug.Log("SHOOT EVENT RECEIVED");
 
         GameObject bullet = Instantiate(
             bulletPrefab,
@@ -50,9 +39,6 @@ public class VRGun : MonoBehaviour
         );
 
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
-        if (rb != null)
-        {
-            rb.linearVelocity = firePoint.forward * bulletSpeed;
-        }
+        rb.linearVelocity = firePoint.forward * bulletSpeed;
     }
 }

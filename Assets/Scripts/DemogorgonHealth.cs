@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DemogorgonHealth : MonoBehaviour
 {
     public float maxHealth = 100f;
     float currentHealth;
     public Image healthFill;
+    public TextMeshProUGUI scoreText;
+    private float deathScore = 10f;
 
     void Start()
     {
@@ -20,6 +23,7 @@ public class DemogorgonHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+            scoreText.text = $"HellFire Points: {deathScore}";
         }
     }
     

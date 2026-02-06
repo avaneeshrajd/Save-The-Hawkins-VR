@@ -5,11 +5,11 @@ public class DemogorgonAI : MonoBehaviour
 {
     public Transform player;
 
-    public float chaseRange = 50f;
-    public float attackRange = 20f;
+    public float chaseRange = 100f;
+    public float attackRange = 10f;
     
     public float attackCooldown = 2f;
-    public float damage = 5f;
+    public float damage = 15f;
     
     
     PlayerHealth playerHealth;

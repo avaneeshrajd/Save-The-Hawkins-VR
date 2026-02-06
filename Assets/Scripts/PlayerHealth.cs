@@ -10,8 +10,8 @@ public class PlayerHealth : MonoBehaviour
 
     [Header("UI")]
     public Image healthFill;
-
     public GameObject gameEnd;
+    public GameObject lowHealth;
 
 
     [Header("Auto Heal")]
@@ -57,12 +57,20 @@ public class PlayerHealth : MonoBehaviour
             gameEnd.SetActive(true);
             Die();
         }
+
+        if (currentHealth <= 30)
+        {
+            lowHealth.SetActive(true);
+        }
     }
 
     void UpdateHealthUI()
     {
         if (healthFill != null)
+        {
             healthFill.fillAmount = currentHealth / maxHealth;
+            lowHealth.SetActive(false);
+        }
     }
 
     void Die()
