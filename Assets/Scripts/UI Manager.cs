@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 public class UIManager : MonoBehaviour
 {
     public GameObject pauseBtn;
@@ -12,13 +13,14 @@ public class UIManager : MonoBehaviour
     public GameObject settingPanel;
     public GameObject sliderBar;
     public GameObject gun;
-    
+    public TextMeshProUGUI scoreText;
 
     public void Onpausebtn()
     {
         Time.timeScale = 0f;
         pausePanel.SetActive(true);
         gun.SetActive(false);
+        scoreText.text = DemogorgonHealth.Instance.ScoreTxt();
     }
 
     public void Onhomebtn()

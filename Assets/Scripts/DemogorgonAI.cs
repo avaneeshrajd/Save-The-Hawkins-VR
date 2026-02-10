@@ -9,7 +9,7 @@ public class DemogorgonAI : MonoBehaviour
     public float attackRange = 10f;
     
     public float attackCooldown = 2f;
-    public float damage = 15f;
+    public float damage = 25f;
     
     
     PlayerHealth playerHealth;
