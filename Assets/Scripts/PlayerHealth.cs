@@ -69,7 +69,6 @@ public class PlayerHealth : MonoBehaviour
         if (healthFill != null)
         {
             healthFill.fillAmount = currentHealth / maxHealth;
-            lowHealth.SetActive(false);
         }
     }
 
