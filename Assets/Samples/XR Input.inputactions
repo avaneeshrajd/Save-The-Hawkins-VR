@@ -3,7 +3,7 @@
     "name": "XR Input",
     "maps": [
         {
-            "name": "XRI RightHand",
+            "name": "XRI LeftHand",
             "id": "75e0d0ab-4cab-489b-9996-79366cce2c49",
             "actions": [
                 {
@@ -20,7 +20,7 @@
                 {
                     "name": "",
                     "id": "4a4e5b2e-e5e1-4358-8365-48aa0376301a",
-                    "path": "<XRController>{RightHand}/{TriggerButton}",
+                    "path": "<XRController>{LeftHand}/{TriggerButton}",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
