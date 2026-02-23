@@ -3,21 +3,27 @@ using UnityEngine.AI;
 
 public class DemogorgonAI : MonoBehaviour
 {
+    public static DemogorgonAI Instance;
     public Transform player;
-
-    public float chaseRange = 100f;
+    
     public float attackRange = 10f;
     
     public float attackCooldown = 2f;
-    public float damage = 25f;
+    private float damage = 25f;
     
     
     PlayerHealth playerHealth;
 
-    NavMeshAgent agent;
-    Animator anim;
+    public NavMeshAgent agent;
+    public Animator anim;
     float lastAttack;
 
+
+    void Awake()
+    {
+        Instance = this;
+    }
+    
     void Start()
     {
 
@@ -37,36 +43,17 @@ public class DemogorgonAI : MonoBehaviour
     {
         float distance = Vector3.Distance(transform.position, player.position);
         Debug.Log("Distance: " + distance);
-
-
-        if (distance <= chaseRange)
-        {
-            agent.isStopped = false;
-            agent.SetDestination(player.position);
-
-            if (anim != null)
-            {
-                anim.SetBool("Walk", true);
-                Debug.Log("Distance: " + distance);
-            }
-
-
-            if (distance <= attackRange)
-            {
-                agent.isStopped = true;
-                TryAttack();
-                
-            }
-
+        agent.isStopped = false;
+        agent.SetDestination(player.position);
+        if (anim != null) 
+        { 
+            anim.SetBool("Walk", true);
+            Debug.Log("Distance: " + distance);
         }
-        else
-        {
+        if (distance <= attackRange)
+        { 
             agent.isStopped = true;
-
-            if (anim != null)
-            {
-                anim.SetBool("Walk", false);
-            }
+            TryAttack();
         }
     }
 

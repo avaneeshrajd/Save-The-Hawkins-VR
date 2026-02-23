@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Reflection;
 using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
     public float maxHealth = 100f;
-    public float currentHealth;
+    private float currentHealth;
 
     [Header("UI")]
     public Image healthFill;
@@ -54,8 +55,10 @@ public class PlayerHealth : MonoBehaviour
         {
             //StartCoroutine(Die());
             mainCamera.localRotation = Quaternion.identity;
-            gameEnd.SetActive(true);
             Die();
+            StartCoroutine(FallDown());
+            Time.timeScale = 0;
+            UIManager.Instance.PlayerDie();
         }
 
         if (currentHealth <= 30)
@@ -75,7 +78,6 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         StopAllCoroutines();
-        StartCoroutine(FallDown());
 
         // yield return new WaitForSeconds(2f);
         // Quaternion startRot = mainCamera.localRotation;

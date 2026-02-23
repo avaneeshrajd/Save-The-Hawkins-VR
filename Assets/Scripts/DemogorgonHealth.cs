@@ -4,18 +4,13 @@ using TMPro;
 
 public class DemogorgonHealth : MonoBehaviour
 {
-    public static DemogorgonHealth Instance;
     public float maxHealth = 100f;
     private float currentHealth;
     public Image healthFill;
     public TextMeshProUGUI scoreText;
-    public float deathScore = 10f;
+    public int deathScore = 10;
 
-
-    private void Awake()
-    {
-        Instance = this;
-    }
+    
     void Start()
     {
         currentHealth = maxHealth;
@@ -29,7 +24,6 @@ public class DemogorgonHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
-            ScoreTxt();
         }
     }
     
@@ -42,11 +36,7 @@ public class DemogorgonHealth : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
+        UIManager.Instance.EnemyDie(deathScore);
     }
-
-    public string ScoreTxt()
-    {
-        scoreText.text = $"HellFire Points: {deathScore}";
-        return  scoreText.text;
-    }
+    
 }

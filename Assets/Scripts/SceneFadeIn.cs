@@ -14,11 +14,11 @@ public class SceneFadeIn : MonoBehaviour
     void Start()
     {
         StartCoroutine(FadeInSequence());
+        
     }
 
     IEnumerator FadeInSequence()
     {
-        
         yield return new WaitForSeconds(waitTime);
 
         

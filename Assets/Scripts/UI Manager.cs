@@ -3,26 +3,31 @@ using UnityEngine.SceneManagement;
 using TMPro;
 public class UIManager : MonoBehaviour
 {
-    public GameObject pauseBtn;
+    public static UIManager Instance;
     public GameObject pausePanel;
-    public GameObject homeBtn;
-    public GameObject resumeBtn;
-    public GameObject resumeBtn2;
-    public GameObject quitBtn;
-    public GameObject settingsBtn;
     public GameObject settingPanel;
-    public GameObject sliderBar;
+    public GameObject resultPanel;
     public GameObject gun;
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI scoreText2;
+    public TextMeshProUGUI scoreText3;
     public GameObject mainPanel;
+    
+    private int _currentDeathScore;
 
+
+    void Awake()
+    {
+        Instance = this;
+    }
+    
     public void Onpausebtn()
     {
         Time.timeScale = 0f;
         mainPanel.SetActive(false);
         pausePanel.SetActive(true);
         gun.SetActive(false);
-        scoreText.text = DemogorgonHealth.Instance.ScoreTxt();
+        scoreText2.text = _currentDeathScore.ToString();
     }
 
     public void Onhomebtn()
@@ -50,5 +55,24 @@ public class UIManager : MonoBehaviour
     public void Onquitbtn()
     {
         Application.Quit();
+    }
+
+    public void OnReplayBtnClick()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Hawkin City");
+    }
+
+    public void EnemyDie(int deathScore)
+    {
+        _currentDeathScore += deathScore;
+        scoreText.text = $"HellFire Points: {_currentDeathScore}";
+    }
+
+    public void PlayerDie()
+    {
+        resultPanel.SetActive(true);
+        mainPanel.SetActive(false);
+        gun.SetActive(false);
     }
 }

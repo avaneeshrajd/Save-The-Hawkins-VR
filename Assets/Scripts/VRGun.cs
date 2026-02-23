@@ -41,4 +41,5 @@ public class VRGun : MonoBehaviour
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         rb.linearVelocity = firePoint.forward * bulletSpeed;
     }
+    
 }
