@@ -72,6 +72,7 @@ public class UIManager : MonoBehaviour
     public void PlayerDie()
     {
         resultPanel.SetActive(true);
+        scoreText3.text = _currentDeathScore.ToString();
         mainPanel.SetActive(false);
         gun.SetActive(false);
     }
