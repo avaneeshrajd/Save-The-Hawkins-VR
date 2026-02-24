@@ -11,8 +11,8 @@ public class PlayerHealth : MonoBehaviour
 
     [Header("UI")]
     public Image healthFill;
-    public GameObject gameEnd;
     public GameObject lowHealth;
+    public AudioSource heartBeat;
 
 
     [Header("Auto Heal")]
@@ -55,15 +55,24 @@ public class PlayerHealth : MonoBehaviour
         {
             //StartCoroutine(Die());
             mainCamera.localRotation = Quaternion.identity;
-            Die();
+            StopCoroutines();
+            lowHealth.SetActive(false);
+            heartBeat.Stop();
             StartCoroutine(FallDown());
             Time.timeScale = 0;
             UIManager.Instance.PlayerDie();
         }
 
-        if (currentHealth <= 30)
+        if (currentHealth <= 50 && UIManager.Instance.resultPanel.activeSelf == false)
         {
             lowHealth.SetActive(true);
+            heartBeat.Play();
+        }
+
+        if (currentHealth > 50)
+        {
+            lowHealth.SetActive(false);
+            heartBeat.Stop();
         }
     }
 
@@ -75,7 +84,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    void Die()
+    void StopCoroutines()
     {
         StopAllCoroutines();
 

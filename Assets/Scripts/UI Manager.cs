@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
     public GameObject pausePanel;
     public GameObject settingPanel;
     public GameObject resultPanel;
+    public GameObject lowHealthPanel;
     public GameObject gun;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI scoreText2;
@@ -28,6 +29,7 @@ public class UIManager : MonoBehaviour
         pausePanel.SetActive(true);
         gun.SetActive(false);
         scoreText2.text = _currentDeathScore.ToString();
+        lowHealthPanel.SetActive(false);
     }
 
     public void Onhomebtn()
@@ -50,6 +52,7 @@ public class UIManager : MonoBehaviour
         mainPanel.SetActive(false);
         settingPanel.SetActive(true);
         gun.SetActive(false);
+        lowHealthPanel.SetActive(false);
     }
 
     public void Onquitbtn()
@@ -71,6 +74,7 @@ public class UIManager : MonoBehaviour
 
     public void PlayerDie()
     {
+        lowHealthPanel.SetActive(false);
         resultPanel.SetActive(true);
         scoreText3.text = _currentDeathScore.ToString();
         mainPanel.SetActive(false);
