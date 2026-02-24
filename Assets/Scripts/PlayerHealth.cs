@@ -6,24 +6,24 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float maxHealth = 100f;
-    private float currentHealth;
+    [SerializeField] private float maxHealth = 100f;
+    [SerializeField] private float currentHealth;
 
     [Header("UI")]
-    public Image healthFill;
-    public GameObject lowHealth;
-    public AudioSource heartBeat;
+    [SerializeField] private Image healthFill;
+    [SerializeField] private GameObject lowHealth;
+    [SerializeField] private AudioSource heartBeat;
 
 
     [Header("Auto Heal")]
-    public float healDelay = 5f;    
-    public float healSpeed = 10f;    
+    [SerializeField] private float healDelay = 5f;    
+    [SerializeField] private float healSpeed = 10f;    
 
-    float lastHitTime;
+    [SerializeField] private float lastHitTime;
     
-    public Transform mainCamera;
-    public float fallSpeed = 1.5f;
-    public float fallAngle = -90f;
+    [SerializeField] private Transform mainCamera;
+    [SerializeField] private float fallSpeed = 1.5f;
+    [SerializeField] private float fallAngle = -90f;
 
 
     void Start()

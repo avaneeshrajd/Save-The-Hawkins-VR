@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject demoPrefab;
-    public Transform[] spawnPoints;
-    public float spawnRate = 10f;
+    [SerializeField] private GameObject demoPrefab;
+    [SerializeField] private Transform[] spawnPoints;
+    [SerializeField] private float spawnRate = 10f;
 
     void Start()
     {

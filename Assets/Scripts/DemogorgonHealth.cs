@@ -4,11 +4,11 @@ using TMPro;
 
 public class DemogorgonHealth : MonoBehaviour
 {
-    public float maxHealth = 100f;
-    private float currentHealth;
-    public Image healthFill;
-    public TextMeshProUGUI scoreText;
-    public int deathScore = 10;
+    [SerializeField] private float maxHealth = 100f;
+    [SerializeField] private float currentHealth;
+    [SerializeField] private Image healthFill;
+    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private int deathScore = 10;
 
     
     void Start()

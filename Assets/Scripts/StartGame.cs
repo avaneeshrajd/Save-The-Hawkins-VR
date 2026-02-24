@@ -3,18 +3,18 @@ using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviour
 {
-    public GameObject upsideDownGate;
-    public GameObject btnPanel;
-    public GameObject gameTitle;
-    public GameObject upsideDownTitle;
-    public GameObject modesPanel;
-    public GameObject introPanel;
-    public GameObject storylinePanel;
-    public GameObject firstStoryPanel;
-    public GameObject secondStoryPanel;
-    public GameObject thirdStoryPanel;
-    public GameObject fourthStoryPanel;
-    public GameObject fifthStoryPanel;
+    [SerializeField] private GameObject upsideDownGate;
+    [SerializeField] private GameObject btnPanel;
+    [SerializeField] private GameObject gameTitle;
+    [SerializeField] private GameObject upsideDownTitle;
+    [SerializeField] private GameObject modesPanel;
+    [SerializeField] private GameObject introPanel;
+    [SerializeField] private GameObject storylinePanel;
+    [SerializeField] private GameObject firstStoryPanel;
+    [SerializeField] private GameObject secondStoryPanel;
+    [SerializeField] private GameObject thirdStoryPanel;
+    [SerializeField] private GameObject fourthStoryPanel;
+    [SerializeField] private GameObject fifthStoryPanel;
 
 
     public void StartButton()

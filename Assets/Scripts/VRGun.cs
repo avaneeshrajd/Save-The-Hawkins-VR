@@ -3,12 +3,12 @@ using UnityEngine.InputSystem;
 
 public class VRGun : MonoBehaviour
 {
-    public Transform firePoint;
-    public GameObject bulletPrefab;
-    public float bulletSpeed = 40f;
-    public AudioSource shotSound;
+    [SerializeField] private Transform firePoint;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private float bulletSpeed = 40f;
+    [SerializeField] private AudioSource shotSound;
 
-    public InputActionReference shootAction;
+    [SerializeField] private InputActionReference shootAction;
 
     void OnEnable()
     {

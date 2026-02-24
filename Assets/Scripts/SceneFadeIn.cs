@@ -4,12 +4,12 @@ using TMPro;
 
 public class SceneFadeIn : MonoBehaviour
 {
-    public CanvasGroup fadeCanvas;     
-    public TextMeshProUGUI enteringText;
-    public float waitTime = 10f;
-    public float fadeSpeed = 0.5f;
-    public GameObject gun;
-    public AudioSource gunEquip;
+    [SerializeField] private CanvasGroup fadeCanvas;     
+    [SerializeField] private TextMeshProUGUI enteringText;
+    [SerializeField] private float waitTime = 10f;
+    [SerializeField] private float fadeSpeed = 0.5f;
+    [SerializeField] private GameObject gun;
+    [SerializeField] private AudioSource gunEquip;
 
     void Start()
     {

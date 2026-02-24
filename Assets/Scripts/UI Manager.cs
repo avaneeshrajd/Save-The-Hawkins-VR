@@ -4,17 +4,17 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
-    public GameObject pausePanel;
-    public GameObject settingPanel;
-    public GameObject resultPanel;
-    public GameObject lowHealthPanel;
-    public GameObject gun;
-    public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI scoreText2;
-    public TextMeshProUGUI scoreText3;
-    public GameObject mainPanel;
+    [SerializeField] private GameObject pausePanel;
+    [SerializeField] private GameObject settingPanel;
+    [SerializeField] public GameObject resultPanel;
+    [SerializeField] private GameObject lowHealthPanel;
+    [SerializeField] private GameObject gun;
+    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI scoreText2;
+    [SerializeField] private TextMeshProUGUI scoreText3;
+    [SerializeField] private GameObject mainPanel;
     
-    private int _currentDeathScore;
+    [SerializeField] private int _currentDeathScore;
 
 
     void Awake()

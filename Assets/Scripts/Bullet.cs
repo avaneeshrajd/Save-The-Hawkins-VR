@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private float _lifeTime = 1f;
-    private int _damage = 5;
+    [SerializeField] private float lifeTime = 1f;
+    [SerializeField] private int damage = 5;
     
     void Start()
     {
-        Destroy(gameObject, _lifeTime);
+        Destroy(gameObject, lifeTime);
     }
 
     void OnTriggerEnter(Collider hit)
@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
         {
             DemogorgonHealth enemy = hit.gameObject.GetComponent<DemogorgonHealth>();
             if (enemy != null)
-                enemy.TakeDamage(_damage);
+                enemy.TakeDamage(damage);
         }
 
         Destroy(gameObject);

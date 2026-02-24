@@ -4,18 +4,18 @@ using UnityEngine.AI;
 public class DemogorgonAI : MonoBehaviour
 {
     public static DemogorgonAI Instance;
-    public Transform player;
+    [SerializeField] private Transform player;
     
-    public float attackRange = 10f;
+    [SerializeField] private float attackRange = 10f;
     
-    public float attackCooldown = 2f;
-    private float damage = 25f;
+    [SerializeField] private float attackCooldown = 2f;
+    [SerializeField] private float damage = 25f;
     
     
     PlayerHealth playerHealth;
 
-    public NavMeshAgent agent;
-    public Animator anim;
+    NavMeshAgent agent;
+    Animator anim;
     float lastAttack;
 
 
