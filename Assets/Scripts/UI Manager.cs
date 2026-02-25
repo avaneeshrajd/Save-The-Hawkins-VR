@@ -4,6 +4,8 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
+    private int _currentDeathScore;
+    
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject settingPanel;
     [SerializeField] public GameObject resultPanel;
@@ -13,8 +15,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText2;
     [SerializeField] private TextMeshProUGUI scoreText3;
     [SerializeField] private GameObject mainPanel;
-    
-    [SerializeField] private int _currentDeathScore;
 
 
     void Awake()
@@ -35,6 +35,7 @@ public class UIManager : MonoBehaviour
     public void Onhomebtn()
     {
         SceneManager.LoadScene("Home");
+        StartGame.Instance.Start();
     }
 
     public void Onresumebtn()

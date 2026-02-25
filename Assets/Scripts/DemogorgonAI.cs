@@ -6,14 +6,12 @@ public class DemogorgonAI : MonoBehaviour
     public static DemogorgonAI Instance;
     [SerializeField] private Transform player;
     
-    [SerializeField] private float attackRange = 10f;
-    
-    [SerializeField] private float attackCooldown = 2f;
-    [SerializeField] private float damage = 25f;
+    private float attackRange = 10f;
+    private float attackCooldown = 2f;
+    private float damage = 25f;
     
     
     PlayerHealth playerHealth;
-
     NavMeshAgent agent;
     Animator anim;
     float lastAttack;

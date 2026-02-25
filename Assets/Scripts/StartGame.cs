@@ -3,6 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviour
 {
+    public static StartGame Instance;
+
+    [SerializeField] private Transform playerPositon;
     [SerializeField] private GameObject upsideDownGate;
     [SerializeField] private GameObject btnPanel;
     [SerializeField] private GameObject gameTitle;
@@ -15,8 +18,37 @@ public class StartGame : MonoBehaviour
     [SerializeField] private GameObject thirdStoryPanel;
     [SerializeField] private GameObject fourthStoryPanel;
     [SerializeField] private GameObject fifthStoryPanel;
+    [SerializeField] private Light flickerLight;
+    
+    private float minIntensity = 800f;
+    private float maxIntensity = 1000f;
+    private float flickerSpeed = 0.1f;
+    private float timer;
 
 
+    private void Awake()
+    {
+        Instance = this;
+    }
+    
+    public void Start()
+    {
+        playerPositon.position = new Vector3(1.5f, 1f, 0f);
+        playerPositon.rotation = Quaternion.Euler(0f, 180f, 0f);
+    }
+    
+    void Update()
+    {
+        // flickerLight.intensity = Random.Range(minIntensity, maxIntensity);
+        timer += Time.deltaTime;
+        
+        if (timer >= flickerSpeed)
+        {
+            flickerLight.intensity = Random.Range(minIntensity, maxIntensity);
+            timer = 0f;
+        }
+    }
+    
     public void StartButton()
     { 
         btnPanel.SetActive(false);
