@@ -6,10 +6,12 @@ public class SceneFadeIn : MonoBehaviour
 {
     [SerializeField] private CanvasGroup fadeCanvas;     
     [SerializeField] private TextMeshProUGUI enteringText;
-    [SerializeField] private float waitTime = 10f;
-    [SerializeField] private float fadeSpeed = 0.5f;
     [SerializeField] private GameObject gun;
     [SerializeField] private AudioSource gunEquip;
+    [SerializeField] private AudioSource thunderSound;
+    
+    private float waitTime = 10f;
+    private float fadeSpeed = 0.5f;
 
     void Start()
     {
@@ -33,6 +35,7 @@ public class SceneFadeIn : MonoBehaviour
         }
 
         fadeCanvas.alpha = 0;
+        thunderSound.Play();
         gun.SetActive(true);
         gunEquip.Play();
         
