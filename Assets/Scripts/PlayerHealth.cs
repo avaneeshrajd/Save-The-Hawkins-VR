@@ -63,16 +63,18 @@ public class PlayerHealth : MonoBehaviour
             UIManager.Instance.PlayerDie();
         }
 
-        if (currentHealth <= 50 && UIManager.Instance.resultPanel.activeSelf == false)
+        if (currentHealth < 50 && UIManager.Instance.resultPanel.activeSelf == false)
         {
             lowHealth.SetActive(true);
             heartBeat.Play();
+            UpdateHealthUI();
         }
 
-        if (currentHealth > 50)
+        if (currentHealth >= 50)
         {
             lowHealth.SetActive(false);
             heartBeat.Stop();
+            UpdateHealthUI();
         }
     }
 

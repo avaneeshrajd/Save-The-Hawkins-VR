@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private float lifeTime = 1f;
-    [SerializeField] private int damage = 5;
+    private float lifeTime = 1f;
+    private int damage = 5;
     
     void Start()
-    {
+    { 
         Destroy(gameObject, lifeTime);
     }
 

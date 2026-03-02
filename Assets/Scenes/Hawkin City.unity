@@ -1331,20 +1331,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
---- !u!114 &98356241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
-  m_Name: XRI LeftHand/Shoot
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
-  m_Asset: {fileID: -944628639613478452, guid: c10900a460a004387a769948dba8b1d4, type: 3}
-  m_ActionId: b2a1b24c-ab91-43e7-bc02-7cdc526cc516
 --- !u!1 &147205255
 GameObject:
   m_ObjectHideFlags: 0
@@ -2889,6 +2875,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 328797489}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &340860841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: XRI LeftHand/Shoot
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: c10900a460a004387a769948dba8b1d4, type: 3}
+  m_ActionId: b2a1b24c-ab91-43e7-bc02-7cdc526cc516
 --- !u!1 &354260981
 GameObject:
   m_ObjectHideFlags: 0
@@ -3878,8 +3878,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -4.9999847, y: 0.8999996}
-  m_SizeDelta: {x: -20, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.44997978}
+  m_SizeDelta: {x: 0, y: -0.90003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &530633164
 GameObject:
@@ -5235,7 +5235,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d7348fb3f11ba4f6f933462328963785, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e15594c572536421897ca80fecbd4896, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10873,11 +10873,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e820b3ad1be4a435ea9ce9d71cdb2dc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VRGun
+  target: {fileID: 1387972729}
   firePoint: {fileID: 1386568070}
   bulletPrefab: {fileID: 1659594352548949352, guid: 22b846fb0efbf4471ab8335a4ea0f956, type: 3}
   bulletSpeed: 40
   shotSound: {fileID: 1735740930}
-  shootAction: {fileID: 98356241}
+  shootAction: {fileID: 340860841}
 --- !u!64 &1386568077 stripped
 MeshCollider:
   m_CorrespondingSourceObject: {fileID: 9166191692367435985, guid: 9c32f2e3b18a3a94fa0cb90a4ac1c2fd, type: 3}
@@ -10886,6 +10887,11 @@ MeshCollider:
 --- !u!1 &1387972722 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3267467383329437882, guid: 3931f7184ca1d4e09a18b32a9ee283e5, type: 3}
+  m_PrefabInstance: {fileID: 3800455478581095474}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1387972729 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2743731114386842112, guid: 3931f7184ca1d4e09a18b32a9ee283e5, type: 3}
   m_PrefabInstance: {fileID: 3800455478581095474}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1391156485

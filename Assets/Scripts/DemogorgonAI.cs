@@ -9,6 +9,7 @@ public class DemogorgonAI : MonoBehaviour
     private float attackRange = 10f;
     private float attackCooldown = 2f;
     private float damage = 25f;
+    public float distance;
     
     
     PlayerHealth playerHealth;
@@ -39,7 +40,7 @@ public class DemogorgonAI : MonoBehaviour
 
     void Update()
     {
-        float distance = Vector3.Distance(transform.position, player.position);
+        distance = Vector3.Distance(transform.position, player.position);
         Debug.Log("Distance: " + distance);
         agent.isStopped = false;
         agent.SetDestination(player.position);
