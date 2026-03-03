@@ -8,7 +8,7 @@ public class DemogorgonAI : MonoBehaviour
     
     private float attackRange = 10f;
     private float attackCooldown = 2f;
-    private float damage = 25f;
+    private float damage = 20f;
     public float distance;
     
     
@@ -41,13 +41,11 @@ public class DemogorgonAI : MonoBehaviour
     void Update()
     {
         distance = Vector3.Distance(transform.position, player.position);
-        Debug.Log("Distance: " + distance);
         agent.isStopped = false;
         agent.SetDestination(player.position);
-        if (anim != null) 
-        { 
+        if (anim != null)
+        {
             anim.SetBool("Walk", true);
-            Debug.Log("Distance: " + distance);
         }
         if (distance <= attackRange)
         { 
@@ -58,8 +56,6 @@ public class DemogorgonAI : MonoBehaviour
 
     void TryAttack()
     {
-        Debug.Log("TryAttack called");
-
         if (Time.time - lastAttack < attackCooldown) return;
 
         lastAttack = Time.time;
@@ -69,7 +65,5 @@ public class DemogorgonAI : MonoBehaviour
 
         if (playerHealth != null)
             playerHealth.TakeDamage(damage);
-
-        Debug.Log("Demogorgon attacked player");
     }
 }
