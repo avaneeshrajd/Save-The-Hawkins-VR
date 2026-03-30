@@ -34,7 +34,7 @@ public class StartGame : MonoBehaviour
     public void Start()
     {
         playerPositon.position = new Vector3(1.5f, 1f, 0f);
-        playerPositon.rotation = Quaternion.Euler(0f, 180f, 0f);
+        // playerPositon.rotation = Quaternion.Euler(0f, 180f, 0f);
     }
     
     void Update()
