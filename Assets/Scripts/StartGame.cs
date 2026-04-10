@@ -18,6 +18,9 @@ public class StartGame : MonoBehaviour
     [SerializeField] private GameObject thirdStoryPanel;
     [SerializeField] private GameObject fourthStoryPanel;
     [SerializeField] private GameObject fifthStoryPanel;
+    [SerializeField] private GameObject gameGuidePanel;
+    [SerializeField] private GameObject gameGuidePanel2;
+    [SerializeField] private GameObject gameGuidePanel3;
     [SerializeField] private Light flickerLight;
     
     private float minIntensity = 800f;
@@ -39,7 +42,6 @@ public class StartGame : MonoBehaviour
     
     void Update()
     {
-        // flickerLight.intensity = Random.Range(minIntensity, maxIntensity);
         timer += Time.deltaTime;
         
         if (timer >= flickerSpeed)
@@ -115,6 +117,25 @@ public class StartGame : MonoBehaviour
     {
         fifthStoryPanel.SetActive(false);
         storylinePanel.SetActive(false);
+        gameGuidePanel.SetActive(true);
+    }
+
+    public void OnNextbtn7Click()
+    {
+        gameGuidePanel.SetActive(false);
+        gameGuidePanel2.SetActive(true);
+        
+    }
+
+    public void OnNextbtn8Click()
+    {
+        gameGuidePanel2.SetActive(false);
+        gameGuidePanel3.SetActive(true);
+    }
+
+    public void OnNextbtn9Click()
+    {
+        gameGuidePanel3.SetActive(false);
         gameTitle.SetActive(true);
         btnPanel.SetActive(true);
     }
@@ -153,7 +174,8 @@ public class StartGame : MonoBehaviour
     {
         introPanel.SetActive(false);
         storylinePanel.SetActive(false);
-        btnPanel.SetActive(true);
-        gameTitle.SetActive(true);
+        gameGuidePanel.SetActive(true);
+        // btnPanel.SetActive(true);
+        // gameTitle.SetActive(true);
     }
 }
