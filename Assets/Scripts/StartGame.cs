@@ -22,6 +22,7 @@ public class StartGame : MonoBehaviour
     [SerializeField] private GameObject gameGuidePanel2;
     [SerializeField] private GameObject gameGuidePanel3;
     [SerializeField] private Light flickerLight;
+    [SerializeField] private GameObject guideBtn;
     
     private float minIntensity = 800f;
     private float maxIntensity = 1000f;
@@ -177,5 +178,12 @@ public class StartGame : MonoBehaviour
         gameGuidePanel.SetActive(true);
         // btnPanel.SetActive(true);
         // gameTitle.SetActive(true);
+    }
+
+    public void OnGuideBtnClick()
+    {
+        gameGuidePanel.SetActive(true);
+        btnPanel.SetActive(false);
+        gameTitle.SetActive(false);
     }
 }
