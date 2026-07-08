@@ -12,8 +12,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Hawkin City.unity
     guid: 01bfb0bab466d469984e43f7de211cd3
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: dc50b85bcec5c4d62a54610059bf127b, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 1729e6e16634f498a94b20997c3a7b01, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 88697d6ab2e194a998100aaf42c1e8bb, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 5ad09c24a68434fde85b6573b1c7c041, type: 2}
+    xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: 1341d0d2b11024ee7a367db0cb4d2166, type: 2}
   m_UseUCBPForAssetBundles: 0
