@@ -567,8 +567,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
@@ -628,9 +628,9 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: b7683e9e4efbe4586bed54aef6a9ec5f, type: 3}
   m_Controller: {fileID: 9100000, guid: 9d6a6b525471249a0b26ae40bd8808d3, type: 2}
-  m_CullingMode: 0
+  m_CullingMode: 2
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
@@ -652,9 +652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  attackRange: 15
-  attackCooldown: 2
-  damage: 5
+  distance: 0
 --- !u!114 &4255463003480454373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -667,7 +665,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 491c796b33d714e13b0f2f06c4057890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  currentHealth: 0
   healthFill: {fileID: 973251058759700212}
   scoreText: {fileID: 0}
-  deathScore: 10
