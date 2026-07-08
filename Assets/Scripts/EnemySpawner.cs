@@ -16,7 +16,7 @@ public class EnemySpawner : MonoBehaviour
 
     void Spawn()
     {
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 3; i++)
         {
             Transform point = spawnPoints[Random.Range(0, spawnPoints.Length)];
             Instantiate(demoPrefab, point.position, point.rotation);
