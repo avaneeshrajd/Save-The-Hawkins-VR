@@ -41,8 +41,23 @@ public class PlayerHealth : MonoBehaviour
             UpdateHealthUI();
         }
     }
+    public bool IsDead => currentHealth <= 0f;
+
+    public void Heal(float amount)
+    {
+        if (IsDead) return;
+        currentHealth = Mathf.Min(maxHealth, currentHealth + amount);
+        UpdateHealthUI();
+        if (currentHealth >= 50 && lowHealth != null)
+        {
+            lowHealth.SetActive(false);
+            heartBeat.Stop();
+        }
+    }
+
     public void TakeDamage(float damage)
     {
+        if (IsDead || Time.timeScale == 0f || TrailerDirector.Active) return;
         currentHealth -= damage;
         lastHitTime = Time.time;
 
@@ -118,6 +133,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void OnHomeClick()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Home");
         transform.position = Vector3.zero;
     }

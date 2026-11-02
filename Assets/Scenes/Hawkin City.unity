@@ -23314,6 +23314,20 @@ MonoBehaviour:
   - {fileID: 297512389}
   - {fileID: 953821699}
   - {fileID: 404135293}
+  - {fileID: 1289631041}
+  - {fileID: 1862820541}
+  - {fileID: 2136517082}
+  - {fileID: 939203661}
+  - {fileID: 1108094755}
+  - {fileID: 308298779}
+  - {fileID: 438982691}
+  - {fileID: 1273060693}
+  - {fileID: 651956906}
+  - {fileID: 1619300502}
+  - {fileID: 1317107426}
+  - {fileID: 1541317741}
+  portalPrefab: {fileID: 8327280628641848723, guid: 8e1187e4d89074ac3ac68d2bd2b32c34, type: 3}
+  spawnSound: {fileID: 8300000, guid: cb9944ec7eaea447685760bd357afd4c, type: 3}
 --- !u!4 &2085803942
 Transform:
   m_ObjectHideFlags: 0
@@ -24145,7 +24159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3953147267797347968, guid: 3931f7184ca1d4e09a18b32a9ee283e5, type: 3}
       propertyPath: m_ApplyRootMotion
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4255463003480454373, guid: 3931f7184ca1d4e09a18b32a9ee283e5, type: 3}
       propertyPath: scoreText
@@ -24164,6 +24178,133 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3931f7184ca1d4e09a18b32a9ee283e5, type: 3}
+--- !u!1 &1999000001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1999000002}
+  - component: {fileID: 1999000003}
+  - component: {fileID: 1999000004}
+  m_Layer: 0
+  m_Name: Upside Down Ambience
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1999000002
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999000001}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1999000003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999000001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d62f8877e6249a18718f68521bbee61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BatSwarm
+  batPrefab: {fileID: 0}
+  batCount: 16
+  minRadius: 6
+  maxRadius: 28
+  minHeight: 4
+  maxHeight: 14
+  startSwoopInterval: 12
+  minSwoopInterval: 4
+  swoopSound: {fileID: 0}
+  respawnDelay: 6
+--- !u!114 &1999000004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999000001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7437382626ad47178c652841eacff09f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UpsideDownGrowth
+  growthPrefab: {fileID: 8327280628641848723, guid: 8e1187e4d89074ac3ac68d2bd2b32c34, type: 3}
+--- !u!1 &1999000011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1999000012}
+  - component: {fileID: 1999000013}
+  m_Layer: 0
+  m_Name: Demo Hunt Director
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1999000012
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999000011}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1999000013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999000011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53952c5c171504821a3fd8f914332232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DemoHuntDirector
+  heartbeatClip: {fileID: 8300000, guid: 18b28bf6784964366b1a904dcaeece21, type: 3}
+  attackClip: {fileID: 8300000, guid: 3dc69e79ee4504954af22473df182313, type: 3}
+  bossMusic: {fileID: 8300000, guid: 12eadfbd8e190497d9768e5c380f01cc, type: 3}
+  swordModel: {fileID: 919132149155446097, guid: 717fcf860cef4c3a984a0b01d52199c0, type: 3}
+  swordMaterial: {fileID: 0}
+  swordTexture: {fileID: 2800000, guid: a180f5cc0b16247fb838c1531de97768, type: 3}
+  flipSword: 0
+  panelSprite: {fileID: 21300000, guid: e15594c572536421897ca80fecbd4896, type: 3}
+  panelButtonSprite: {fileID: 21300000, guid: d9d0ad2cf6598443389b0cfa12d87feb, type: 3}
+  panelFont: {fileID: 11400000, guid: 1c00b38d489a04f16b85be30d54ba97e, type: 2}
+  gateCount: 3
+  gateHealth: 600
+  gateMinDistanceFromPlayer: 35
+  gateMinSpacing: 30
+  bossTime: 300
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -24184,3 +24325,5 @@ SceneRoots:
   - {fileID: 1818922857}
   - {fileID: 1403804625}
   - {fileID: 973926068}
+  - {fileID: 1999000002}
+  - {fileID: 1999000012}

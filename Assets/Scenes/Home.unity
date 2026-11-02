@@ -2303,6 +2303,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5360612251992283709, guid: 59b11325035554b2fbeb1d72bdea4fa3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1702266137}
+    - targetCorrespondingSourceObject: {fileID: 5360612251992283709, guid: 59b11325035554b2fbeb1d72bdea4fa3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1702266139}
   m_SourcePrefab: {fileID: 100100000, guid: 59b11325035554b2fbeb1d72bdea4fa3, type: 3}
 --- !u!1001 &466252661
 PrefabInstance:
@@ -2705,16 +2708,16 @@ MonoBehaviour:
 
     2.
     The Gateway: To enter the Upside Down, stand before the mirror and Press Trigger
-    + Grip (Grab) Button simultaneously. This is the only way to cross the veil.
+    Button. This is the only way to cross the veil.
 
 
-    3.
-    Combat: Use the Trigger Button on your Left Controller to fire your VR weapon.
-    Aim for the head !
+    3. Combat: Use the Trigger
+    Button on your Left Controller to fire your VR weapon. Aim for the head !
 
 
-    4. Movement: Use the Right Joystick to navigate through
-    the Hawkins suburbs and the dark corridors of the Upside Down.'
+    4.
+    Movement: Use the Right Joystick to navigate through the Hawkins suburbs and
+    the dark corridors of the Upside Down.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1c00b38d489a04f16b85be30d54ba97e, type: 2}
   m_sharedMaterial: {fileID: 1725660850946091767, guid: 1c00b38d489a04f16b85be30d54ba97e, type: 2}
@@ -8432,19 +8435,7 @@ MonoBehaviour:
       m_Calls: []
   m_Activated:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1529670395}
-        m_TargetAssemblyTypeName: StartGame, Assembly-CSharp
-        m_MethodName: EnterUpsideDown
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -8474,6 +8465,34 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 50.066265, y: 100.00001, z: 78.43654}
   m_Center: {x: 3.629415, y: -0.055511117, z: -19.093695}
+--- !u!114 &1702266139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702266128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d961fb49fb2b4b78a87305b4034cddf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerActivateInteractable
+  onTriggerPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1529670395}
+        m_TargetAssemblyTypeName: StartGame, Assembly-CSharp
+        m_MethodName: EnterUpsideDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  fireOnce: 1
 --- !u!1 &1708333452
 GameObject:
   m_ObjectHideFlags: 0
@@ -9001,7 +9020,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Press Trigger + Grip (Grab) Button '
+  m_text: 'Press Trigger Button '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1c00b38d489a04f16b85be30d54ba97e, type: 2}
   m_sharedMaterial: {fileID: 1725660850946091767, guid: 1c00b38d489a04f16b85be30d54ba97e, type: 2}
@@ -10535,7 +10554,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8445498926119263729, guid: 54524bf2241dc405d8fe7c560e462eee, type: 3}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8445498926119263729, guid: 54524bf2241dc405d8fe7c560e462eee, type: 3}
       propertyPath: InitialModule.maxNumParticles

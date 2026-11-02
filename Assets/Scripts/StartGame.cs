@@ -35,9 +35,17 @@ public class StartGame : MonoBehaviour
         Instance = this;
     }
     
+    // Set once the player has seen the intro story + guide (first launch only).
+    private const string IntroSeenKey = "IntroSeen";
+
     public void Start()
     {
         playerPositon.position = new Vector3(1.5f, 1f, 0f);
+
+        // After the first time, skip the description/guide and go straight to the main menu.
+        // The guide is still available from the Guide button.
+        if (PlayerPrefs.GetInt(IntroSeenKey, 0) == 1)
+            ShowMainMenu();
         // playerPositon.rotation = Quaternion.Euler(0f, 180f, 0f);
     }
     
@@ -139,6 +147,25 @@ public class StartGame : MonoBehaviour
         gameGuidePanel3.SetActive(false);
         gameTitle.SetActive(true);
         btnPanel.SetActive(true);
+        MarkIntroSeen();
+    }
+
+    void MarkIntroSeen()
+    {
+        PlayerPrefs.SetInt(IntroSeenKey, 1);
+        PlayerPrefs.Save();
+    }
+
+    void ShowMainMenu()
+    {
+        if (introPanel != null) introPanel.SetActive(false);
+        if (storylinePanel != null) storylinePanel.SetActive(false);
+        if (gameGuidePanel != null) gameGuidePanel.SetActive(false);
+        if (gameGuidePanel2 != null) gameGuidePanel2.SetActive(false);
+        if (gameGuidePanel3 != null) gameGuidePanel3.SetActive(false);
+        if (modesPanel != null) modesPanel.SetActive(false);
+        if (gameTitle != null) gameTitle.SetActive(true);
+        if (btnPanel != null) btnPanel.SetActive(true);
     }
 
     public void OnBackBtn2Click()

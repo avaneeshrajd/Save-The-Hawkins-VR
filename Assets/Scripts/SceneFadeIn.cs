@@ -4,6 +4,9 @@ using TMPro;
 
 public class SceneFadeIn : MonoBehaviour
 {
+    /// <summary>True once the 'Entering Hawkins' fade has finished and the gun is out.</summary>
+    public static bool Done { get; private set; }
+
     [SerializeField] private CanvasGroup fadeCanvas;     
     [SerializeField] private TextMeshProUGUI enteringText;
     [SerializeField] private GameObject gun;
@@ -15,6 +18,7 @@ public class SceneFadeIn : MonoBehaviour
 
     void Start()
     {
+        Done = false;
         StartCoroutine(FadeInSequence());
         
     }
@@ -38,6 +42,7 @@ public class SceneFadeIn : MonoBehaviour
         thunderSound.Play();
         gun.SetActive(true);
         gunEquip.Play();
+        Done = true;
         
     }
 }
