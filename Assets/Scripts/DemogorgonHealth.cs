@@ -151,7 +151,9 @@ public class DemogorgonHealth : MonoBehaviour
         if (TryGetComponent(out DemogorgonAI ai)) { ai.Suspended = true; ai.enabled = false; }
         if (TryGetComponent(out NavMeshAgent agent)) agent.enabled = false;
         foreach (Collider c in GetComponentsInChildren<Collider>()) c.enabled = false;
-        if (healthFill != null) healthFill.canvas.gameObject.SetActive(false);
+        // Graphic.canvas is null while the Canvas component is disabled, so look it up directly.
+        Canvas barCanvas = healthFill != null ? healthFill.GetComponentInParent<Canvas>(true) : null;
+        if (barCanvas != null) barCanvas.gameObject.SetActive(false);
         Animator anim = GetComponent<Animator>();
 
         if (ai != null && ai.PlayAnim("Death", 0.1f))

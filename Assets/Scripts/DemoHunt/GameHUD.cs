@@ -31,7 +31,7 @@ public class GameHUD : MonoBehaviour
         cam = Camera.main != null ? Camera.main.transform : null;
 
         banner = CreateText("Banner", 3f, new Color(1f, 0.15f, 0.1f), new Vector2(4f, 1.2f));
-        radio = CreateText("Radio", 0.9f, new Color(0.75f, 1f, 0.75f), new Vector2(2.2f, 0.6f));
+        radio = CreateText("Radio", 0.75f, new Color(0.75f, 1f, 0.75f), new Vector2(1.5f, 0.6f));
         banner.gameObject.SetActive(false);
         radio.gameObject.SetActive(false);
     }
@@ -109,7 +109,7 @@ public class GameHUD : MonoBehaviour
             GameFx.Play2D(GameFx.RadioStatic, 0.35f);
             radio.text = "<color=#FFD24D><size=70%>HAWKINS LAB  ))</size></color>\n" + msg;
             radio.gameObject.SetActive(true);
-            PlaceInFront(radio.transform, 1.6f, -0.45f, true);
+            PlaceInFront(radio.transform, 1.8f, -0.12f, true);
 
             float duration = Mathf.Clamp(1.8f + msg.Length * 0.05f, 2.5f, 6f);
             float t = 0f;
@@ -117,7 +117,7 @@ public class GameHUD : MonoBehaviour
             {
                 t += Time.unscaledDeltaTime;
                 radio.alpha = Mathf.Clamp01(t / 0.2f) * Mathf.Clamp01((duration - t) / 0.4f);
-                FollowHead(radio.transform, 1.6f, -0.45f);
+                FollowHead(radio.transform, 1.8f, -0.12f);
                 yield return null;
             }
             GameFx.Play2D(GameFx.Beep, 0.25f);
@@ -145,6 +145,7 @@ public class GameHUD : MonoBehaviour
 
     IEnumerator TaskBoardRoutine(string title, string[] tasks, bool waitForTrigger, float maxSeconds)
     {
+        ResolvePanelStyle();
         // World-space canvas laid out like the Guide panel (3850 x 2800 background).
         var root = new GameObject("Task Board", typeof(RectTransform));
         var canvas = root.AddComponent<Canvas>();
@@ -158,21 +159,47 @@ public class GameHUD : MonoBehaviour
         if (PanelSprite != null) bg.sprite = PanelSprite;
         else bg.color = new Color(0.05f, 0.02f, 0.02f, 0.92f);
 
-        var head = UI<TextMeshProUGUI>("Title", rt, new Vector2(0f, 950f), new Vector2(2650f, 310f));
-        StyleText(head, 300f, new Color(1f, 0.19215687f, 0.19215687f), FontStyles.Bold, TextAlignmentOptions.Center);
+        // Title: one line, inside the frame.
+        var head = UI<TextMeshProUGUI>("Title", rt, new Vector2(0f, 820f), new Vector2(2900f, 300f));
+        StyleText(head, 240f, new Color(1f, 0.19215687f, 0.19215687f), FontStyles.Bold, TextAlignmentOptions.Center);
+        SingleLine(head, 120f, 240f);
         head.text = title;
 
-        var body = UI<TextMeshProUGUI>("Tasks", rt, new Vector2(0f, -80f), new Vector2(3150f, 1730f));
-        StyleText(body, 100f, new Color(0.9433962f, 0.91224635f, 0.91224635f), FontStyles.Normal, TextAlignmentOptions.TopLeft);
-        body.lineSpacing = 40f;
-        body.text = string.Join("\n", tasks);
+        // One row per task: fixed checkbox column + single-line text column, so every
+        // line starts at the same x and nothing wraps. Format: "1|done", "0|open", "B|bonus".
+        Color bodyColor = new Color(0.9433962f, 0.91224635f, 0.91224635f);
+        // Block of width boxW+gap+textW centred on the panel.
+        const float boxW = 200f, gap = 40f, textW = 2400f, left = -(boxW + gap + textW) * 0.5f, rowStep = 260f;
+        float y = 420f;
+        foreach (string line in tasks)
+        {
+            string kind = line.Length > 2 && line[1] == '|' ? line.Substring(0, 1) : "0";
+            string text = line.Length > 2 && line[1] == '|' ? line.Substring(2) : line;
+            if (kind == "B")
+            {
+                var bonus = UI<TextMeshProUGUI>("Bonus", rt, new Vector2(0f, y - 60f), new Vector2(3000f, 200f));
+                StyleText(bonus, 85f, new Color(0.75f, 0.75f, 0.75f), FontStyles.Normal, TextAlignmentOptions.Center);
+                SingleLine(bonus, 55f, 85f);
+                bonus.text = text;
+                y -= rowStep;
+                continue;
+            }
+            var box = UI<TextMeshProUGUI>("Box", rt, new Vector2(left + boxW * 0.5f, y), new Vector2(boxW, 200f));
+            StyleText(box, 115f, kind == "1" ? new Color(0.49f, 1f, 0.49f) : new Color(1f, 0.19215687f, 0.19215687f), FontStyles.Bold, TextAlignmentOptions.Center);
+            box.text = kind == "1" ? "[X]" : "[  ]";
+            var row = UI<TextMeshProUGUI>("Task", rt, new Vector2(left + boxW + gap + textW * 0.5f, y), new Vector2(textW, 200f));
+            StyleText(row, 115f, bodyColor, FontStyles.Normal, TextAlignmentOptions.Left);
+            SingleLine(row, 70f, 115f);
+            row.text = text;
+            y -= rowStep;
+        }
 
         if (waitForTrigger)
         {
-            var btn = UI<UnityEngine.UI.Image>("Next Btn", rt, new Vector2(1500f, -1120f), new Vector2(200f, 200f));
-            if (ButtonSprite != null) btn.sprite = ButtonSprite;
-            var hint = UI<TextMeshProUGUI>("Hint", rt, new Vector2(700f, -1120f), new Vector2(1300f, 200f));
-            StyleText(hint, 90f, new Color(1f, 0.19215687f, 0.19215687f), FontStyles.Bold, TextAlignmentOptions.Right);
+            // Centred prompt along the bottom of the frame.
+            var hint = UI<TextMeshProUGUI>("Hint", rt, new Vector2(0f, -900f), new Vector2(2800f, 220f));
+            StyleText(hint, 110f, new Color(1f, 0.19215687f, 0.19215687f), FontStyles.Bold, TextAlignmentOptions.Center);
+            SingleLine(hint, 70f, 110f);
             hint.text = "PULL TRIGGER TO BEGIN";
         }
 
@@ -195,6 +222,31 @@ public class GameHUD : MonoBehaviour
         }
         GameFx.Play2D(GameFx.Beep, 0.4f, 1.3f);
         Destroy(root);
+    }
+
+    // Falls back to the sprites/font the scene's own menu panels already use,
+    // so the task board matches even if the Director fields are not wired.
+    static void ResolvePanelStyle()
+    {
+        if (PanelSprite == null || ButtonSprite == null)
+            foreach (var sp in Resources.FindObjectsOfTypeAll<Sprite>())
+            {
+                if (PanelSprite == null && sp.name == "BackgroundImg") PanelSprite = sp;
+                if (ButtonSprite == null && sp.name == "NextBtn_UI") ButtonSprite = sp;
+            }
+        if (PanelFont == null)
+            foreach (var f in Resources.FindObjectsOfTypeAll<TMP_FontAsset>())
+                if (f.name.StartsWith("Benguiat")) { PanelFont = f; break; }
+        if (PanelSprite == null) Debug.LogWarning("Task board: BackgroundImg sprite not found, using plain panel.");
+    }
+
+    static void SingleLine(TextMeshProUGUI t, float min, float max)
+    {
+        t.textWrappingMode = TextWrappingModes.NoWrap;
+        t.enableAutoSizing = true;
+        t.fontSizeMin = min;
+        t.fontSizeMax = max;
+        t.overflowMode = TextOverflowModes.Ellipsis;
     }
 
     static T UI<T>(string name, RectTransform parent, Vector2 pos, Vector2 size) where T : Component

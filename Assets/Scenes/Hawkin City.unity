@@ -24189,6 +24189,7 @@ GameObject:
   - component: {fileID: 1999000002}
   - component: {fileID: 1999000003}
   - component: {fileID: 1999000004}
+  - component: {fileID: 1999000005}
   m_Layer: 0
   m_Name: Upside Down Ambience
   m_TagString: Untagged
@@ -24246,6 +24247,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UpsideDownGrowth
   growthPrefab: {fileID: 8327280628641848723, guid: 8e1187e4d89074ac3ac68d2bd2b32c34, type: 3}
+--- !u!114 &1999000005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999000001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676c33d5e1764904995f665154a7bc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UpsideDownSpores
+  rate: 450
+  maxParticles: 4000
+  area: {x: 60, y: 18, z: 60}
+  size: {x: 0.015, y: 0.05}
 --- !u!1 &1999000011
 GameObject:
   m_ObjectHideFlags: 0
@@ -24302,8 +24319,11 @@ MonoBehaviour:
   panelFont: {fileID: 11400000, guid: 1c00b38d489a04f16b85be30d54ba97e, type: 2}
   gateCount: 3
   gateHealth: 600
-  gateMinDistanceFromPlayer: 35
-  gateMinSpacing: 30
+  gatePoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  gateFrontDistance: 3
   bossTime: 300
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

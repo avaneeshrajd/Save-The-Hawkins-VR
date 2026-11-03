@@ -31,10 +31,10 @@ public class DemoHuntDirector : MonoBehaviour
     [Header("Objective")]
     [SerializeField] private int gateCount = 3;
     [SerializeField] private float gateHealth = 600f;
-    [Tooltip("Gates are placed anywhere on the city NavMesh, at least this far from the player.")]
-    [SerializeField] private float gateMinDistanceFromPlayer = 35f;
-    [Tooltip("Minimum distance between two gates.")]
-    [SerializeField] private float gateMinSpacing = 30f;
+    [Tooltip("Optional exact gate spots (Gate 1, 2, 3). Empty = in front of Hawkins Middle School, 777, Hawkins Public Library.")]
+    [SerializeField] private Transform[] gatePoints = new Transform[3];
+    [Tooltip("How far in front of the building the gate is placed (m).")]
+    [SerializeField] private float gateFrontDistance = 3f;
     [SerializeField] private float bossTime = 300f;
 
     EnemySpawner spawner;
@@ -72,56 +72,86 @@ public class DemoHuntDirector : MonoBehaviour
         levelStartTime = Time.time;
         LevelStarted = true;
         GameHUD.Radio("This is Hawkins Lab. The Upside Down is breaking through!");
-        GameHUD.Radio($"Follow the red beams and SHOOT the gates to break their seals.");
+        GameHUD.Radio($"Gate 1 is open at {GatePlaceNames[0]}. Follow the red beam and SHOOT it to break the seal!");
     }
 
+    // "1|" = done, "0|" = open, "B|" = bonus line (see GameHUD.ShowTaskBoard).
     string[] TaskLines()
     {
-        string box(bool done) => done ? "<color=#7CFF7C>[X]</color>" : "<color=#FF3131>[  ]</color>";
-        bool gatesDone = gates.Count > 0 && sealedCount >= gates.Count;
+        int total = TotalGates;
+        bool gatesDone = sealedCount >= total;
         return new[]
         {
-            $"{box(gatesDone)}  Break the seals of all {Mathf.Max(gates.Count, gateCount)} Upside Down gates  <color=#FF6A5A>({sealedCount}/{Mathf.Max(gates.Count, gateCount)})</color>",
-            $"{box(false)}  Survive the Demogorgon waves",
-            $"{box(bossDefeated)}  Defeat the Alpha Demogorgon",
-            "<color=#AAAAAA>BONUS: chain kills for COMBO x4, grab pickups, slash with your sword</color>",
+            (gatesDone ? "1|" : "0|") + $"Break the gate seals in order  ({sealedCount}/{total})",
+            "0|Survive the Demogorgon waves",
+            (bossDefeated ? "1|" : "0|") + "Defeat the Alpha Demogorgon",
+            "B|BONUS: chain kills for combos, grab pickups, use your sword",
         };
     }
 
-    // Places gates at random spots across the whole NavMesh (the whole city), far from the
-    // player and far from each other, and only where the player can actually walk to.
-    void CreateGates()
+    // Gates open one at a time in a fixed order, in front of these landmarks.
+    static readonly string[] GateLandmarks = { "Hawkins Middle School", "777", "Hawkins Public Library" };
+    static readonly string[] GatePlaceNames = { "Hawkins Middle School", "the 777", "Hawkins Public Library" };
+    int TotalGates => Mathf.Max(1, Mathf.Min(gateCount, GateLandmarks.Length));
+    int openedGates;
+
+    void CreateGates() => OpenGate(0);
+
+    void OpenGate(int index)
     {
-        if (cam == null) return;
-        GameObject template = spawner != null ? spawner.PortalTemplate : null;
-
-        List<Vector3> candidates = RandomNavMeshPoints(300);
-        Vector3 playerPos = cam.position;
-        NavMesh.SamplePosition(playerPos, out NavMeshHit playerHit, 5f, NavMesh.AllAreas);
-        var path = new NavMeshPath();
-
-        // Start strict, relax the spacing rules if the map is too small.
-        float minFromPlayer = gateMinDistanceFromPlayer, minBetween = gateMinSpacing;
-        for (int pass = 0; pass < 4 && gates.Count < gateCount; pass++)
-        {
-            Shuffle(candidates);
-            foreach (Vector3 c in candidates)
-            {
-                if (gates.Count >= gateCount) break;
-                if (FlatDistance(c, playerPos) < minFromPlayer) continue;
-                if (gates.Exists(g => FlatDistance(g.transform.position, c) < minBetween)) continue;
-                if (playerHit.hit && (!NavMesh.CalculatePath(playerHit.position, c, NavMesh.AllAreas, path)
-                                      || path.status != NavMeshPathStatus.PathComplete)) continue;
-
-                var gate = UpsideDownGate.Create(c, template, gateHealth, gates.Count);
-                gate.Sealed += OnGateSealed;
-                gates.Add(gate);
-                if (spawner != null) spawner.Gates.Add(gate);
-            }
-            minFromPlayer *= 0.6f;
-            minBetween *= 0.6f;
-        }
+        if (index >= TotalGates || cam == null) return;
+        Vector3 pos = GatePosition(index);
+        var gate = UpsideDownGate.Create(pos, spawner != null ? spawner.PortalTemplate : null, gateHealth, index);
+        gate.Sealed += OnGateSealed;
+        gates.Add(gate);
+        openedGates = index + 1;
+        if (spawner != null) { spawner.Gates.Clear(); spawner.Gates.Add(gate); }
     }
+
+    // Inspector override first; otherwise the walkable spot in front of the landmark.
+    Vector3 GatePosition(int index)
+    {
+        if (gatePoints != null && index < gatePoints.Length && gatePoints[index] != null)
+            return Snap(gatePoints[index].position);
+
+        GameObject landmark = GameObject.Find(GateLandmarks[index]);
+        if (landmark == null)
+        {
+            Debug.LogWarning($"Gate {index + 1}: '{GateLandmarks[index]}' not found, using a random spot.");
+            var pts = RandomNavMeshPoints(50);
+            return pts.Count > 0 ? pts[0] : cam.position;
+        }
+        return FrontOf(landmark);
+    }
+
+    // Tries all four sides of the building; picks the walkable point that faces the street
+    // (closest to where the player starts), just outside the building footprint.
+    Vector3 FrontOf(GameObject building)
+    {
+        Bounds b = new Bounds(building.transform.position, Vector3.zero);
+        foreach (var r in building.GetComponentsInChildren<Renderer>()) b.Encapsulate(r.bounds);
+        Vector3 c = b.center; c.y = b.min.y;
+        Vector3 start = cam.position;
+
+        Vector3 best = c;
+        float bestScore = float.MaxValue;
+        Vector3[] dirs = { Vector3.forward, Vector3.back, Vector3.left, Vector3.right };
+        foreach (Vector3 d in dirs)
+        {
+            float extent = Mathf.Abs(d.x) > 0f ? b.extents.x : b.extents.z;
+            Vector3 probe = c + d * (extent + gateFrontDistance);
+            if (!NavMesh.SamplePosition(probe, out NavMeshHit hit, 6f, NavMesh.AllAreas)) continue;
+            // Must really be outside the footprint.
+            Vector3 flat = hit.position; flat.y = b.center.y;
+            if (b.Contains(flat)) continue;
+            float score = FlatDistance(hit.position, start);
+            if (score < bestScore) { bestScore = score; best = hit.position; }
+        }
+        return bestScore < float.MaxValue ? best : Snap(c + Vector3.forward * (b.extents.z + gateFrontDistance));
+    }
+
+    static Vector3 Snap(Vector3 p) =>
+        NavMesh.SamplePosition(p, out NavMeshHit h, 8f, NavMesh.AllAreas) ? h.position : p;
 
     // Area-weighted random points on the baked NavMesh.
     static List<Vector3> RandomNavMeshPoints(int count)
@@ -168,11 +198,16 @@ public class DemoHuntDirector : MonoBehaviour
     {
         sealedCount++;
         ScoreSystem.AddKill(50);
-        GameHUD.ShowBanner($"GATE SEALED {sealedCount}/{gates.Count}");
-        GameHUD.ShowTaskBoard("TASKS UPDATED", TaskLines(), false, 4f);
-        if (sealedCount < gates.Count)
-            GameHUD.Radio($"Gate sealed! {gates.Count - sealedCount} to go.");
-        else if (!bossSpawned)
+        GameHUD.ShowBanner($"GATE {sealedCount} SEALED", $"{sealedCount}/{TotalGates}");
+        if (sealedCount < TotalGates)
+        {
+            // Next gate tears open.
+            OpenGate(sealedCount);
+            GameHUD.ShowTaskBoard("TASKS UPDATED", TaskLines(), false, 4f);
+            GameHUD.Radio($"Gate sealed! A new gate just opened at {GatePlaceNames[sealedCount]}!");
+        }
+        else GameHUD.ShowTaskBoard("TASKS UPDATED", TaskLines(), false, 4f);
+        if (sealedCount >= TotalGates && !bossSpawned)
             StartCoroutine(BossFinale("All gates sealed... wait. Something BIG is coming through!"));
         CheckWin();
     }
@@ -210,7 +245,7 @@ public class DemoHuntDirector : MonoBehaviour
             bossDefeated = true;
             if (music != null) music.Stop();
             GameHUD.ShowBanner("ALPHA DEFEATED!");
-            if (sealedCount < gates.Count)
+            if (sealedCount < TotalGates)
                 GameHUD.Radio("The Alpha is down! Seal the remaining gates!");
             CheckWin();
         };
@@ -219,7 +254,7 @@ public class DemoHuntDirector : MonoBehaviour
     void CheckWin()
     {
         if (won) return;
-        bool gatesDone = gates.Count == 0 || sealedCount >= gates.Count;
+        bool gatesDone = sealedCount >= TotalGates;
         if (!gatesDone || !bossSpawned || !bossDefeated) return;
         won = true;
         StartCoroutine(WinRoutine());

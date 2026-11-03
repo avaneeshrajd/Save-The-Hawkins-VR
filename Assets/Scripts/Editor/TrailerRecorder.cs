@@ -8,7 +8,7 @@ using UnityEngine;
 /// <summary>
 /// Menu: Save The Hawkins > Record 1-Minute Trailer.
 /// Opens Hawkin City, plays the TrailerDirector shot list and records
-/// ~/Desktop/SaveTheHawkins_Trailer.mp4 (1920x1080, 30 fps, H.264, with game audio).
+/// ~/Desktop/SaveTheHawkins_Trailer.mp4 (3840x2160 4K, 30 fps, H.264, with game audio).
 /// </summary>
 [InitializeOnLoad]
 public static class TrailerRecorder
@@ -35,7 +35,7 @@ public static class TrailerRecorder
 
     const string ScenePath = "Assets/Scenes/Home.unity"; // trailer starts in the Home menu
     const string AutoFlag = "Library/STH_AutoRecordTrailer";
-    const float Length = 61f;
+    const float Length = 64f;
     static RecorderController controller;
     static bool record { get => SessionState.GetBool(RecordKey, false); set => SessionState.SetBool(RecordKey, value); }
     // Saved to the user's Desktop: ~/Desktop/SaveTheHawkins_Trailer.mp4
@@ -88,8 +88,8 @@ public static class TrailerRecorder
             {
                 Source = ImageSource.TaggedCamera,
                 CameraTag = TrailerDirector.CameraTag,
-                OutputWidth = 1920,
-                OutputHeight = 1080,
+                OutputWidth = 3840,
+                OutputHeight = 2160,
             };
             movie.AudioInputSettings.PreserveAudio = true;
             // OutputFile setter fails on absolute paths here, so record inside the project
@@ -99,7 +99,7 @@ public static class TrailerRecorder
             movie.FileNameGenerator.FileName = "SaveTheHawkins_Trailer";
 
             settings.AddRecorderSettings(movie);
-            settings.SetRecordModeToTimeInterval(0f, Length);
+            settings.SetRecordModeToManual(); // stopped when the shot list ends
             settings.FrameRatePlayback = FrameRatePlayback.Constant;
             settings.FrameRate = 30f;
             settings.CapFrameRate = true;
@@ -108,7 +108,7 @@ public static class TrailerRecorder
             controller.PrepareRecording();
             controller.StartRecording();
             EditorApplication.update += WatchRecording;
-            Debug.Log("Recording trailer... (61 s)");
+            Debug.Log("Recording 4K trailer...");
         }
         else if (state == PlayModeStateChange.EnteredPlayMode && !record)
         {
@@ -128,6 +128,8 @@ public static class TrailerRecorder
 
     static void WatchRecording()
     {
+        if (controller != null && controller.IsRecording() && (TrailerDirector.Finished || Time.timeSinceLevelLoad > 90f))
+            controller.StopRecording();
         if (controller != null && !controller.IsRecording())
         {
             EditorApplication.update -= WatchRecording;

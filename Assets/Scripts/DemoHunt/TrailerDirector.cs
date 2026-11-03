@@ -19,6 +19,8 @@ public class TrailerDirector : MonoBehaviour
     public const string CameraTag = "TrailerCam";
     public const string SessionKey = "STH_Trailer";
     public static bool Active { get; private set; }
+    /// <summary>True when the shot list has ended (recorder stops then).</summary>
+    public static bool Finished { get; private set; }
     static TrailerDirector instance;
 
     // Camera rig
@@ -42,6 +44,16 @@ public class TrailerDirector : MonoBehaviour
     Color sunColor;
     float sunIntensity;
     bool cityReady;
+    bool armed; // rifle + sword only appear once in Hawkin City
+
+    // Cinematic grade refs (pulsed on hits) + score
+    LensDistortion lens;
+    ChromaticAberration chroma;
+    ColorAdjustments grade;
+    AudioSource droneSrc, arpSrc;
+    UniversalRenderPipelineAsset rpAsset;
+    float oldRenderScale, oldShadowDist;
+    int oldMsaa;
 
 #if UNITY_EDITOR
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -60,6 +72,7 @@ public class TrailerDirector : MonoBehaviour
     {
         instance = this;
         Active = true;
+        Finished = false;
         DontDestroyOnLoad(gameObject);
         SceneManager.sceneLoaded += OnSceneLoaded;
 
@@ -68,13 +81,88 @@ public class TrailerDirector : MonoBehaviour
         heartbeat = Load<AudioClip>("Assets/Audio/Heart Beat.mp3");
         spawnClip = Load<AudioClip>("Assets/Audio/demogorgon_Spawn.mp3");
         DemogorgonAI.AttackClip = Load<AudioClip>("Assets/Audio/demogorgon_Attack.mp3");
+        BoostQuality();
         BuildCamera();
+        BuildScore();
+    }
+
+    // Full resolution, 4x MSAA, long shadows while recording (restored afterwards).
+    void BoostQuality()
+    {
+        rpAsset = GraphicsSettings.currentRenderPipeline as UniversalRenderPipelineAsset;
+        if (rpAsset == null) return;
+        oldRenderScale = rpAsset.renderScale;
+        oldMsaa = rpAsset.msaaSampleCount;
+        oldShadowDist = rpAsset.shadowDistance;
+        rpAsset.renderScale = 1f;
+        rpAsset.msaaSampleCount = 4;
+        rpAsset.shadowDistance = 90f;
+        QualitySettings.lodBias = 3f;
+    }
+
+    void BuildScore()
+    {
+        droneSrc = MusicSource(TrailerAudio.Drone);
+        arpSrc = MusicSource(TrailerAudio.Arp);
+    }
+
+    AudioSource MusicSource(AudioClip c)
+    {
+        var src = gameObject.AddComponent<AudioSource>();
+        src.clip = c;
+        src.loop = true;
+        src.volume = 0f;
+        src.spatialBlend = 0f;
+        src.ignoreListenerPause = true;
+        src.Play();
+        return src;
+    }
+
+    IEnumerator Fade(AudioSource src, float to, float t)
+    {
+        float from = src.volume;
+        for (float e = 0f; e < t; e += Time.unscaledDeltaTime) { src.volume = Mathf.Lerp(from, to, e / t); yield return null; }
+        src.volume = to;
+    }
+
+    void Music(AudioSource src, float to, float t) => StartCoroutine(Fade(src, to, t));
+    static void Sfx(AudioClip c, float vol = 1f, float pitch = 1f) => GameFx.Play2D(c, vol, pitch);
+
+    // Hit: BRAAM/impact + lens punch, chromatic burst, exposure kick, shake.
+    void Hit(float strength = 1f, bool braam = false)
+    {
+        Sfx(TrailerAudio.Impact, 0.9f * strength);
+        if (braam) Sfx(TrailerAudio.Braam, 0.85f);
+        shake = Mathf.Max(shake, 0.6f * strength);
+        StartCoroutine(Punch(strength));
+    }
+
+    IEnumerator Punch(float strength)
+    {
+        for (float e = 0f; e < 0.5f; e += Time.unscaledDeltaTime)
+        {
+            float k = 1f - e / 0.5f;
+            k *= k;
+            if (lens != null) lens.intensity.value = -0.38f * strength * k;
+            if (chroma != null) chroma.intensity.value = 0.15f + 0.85f * strength * k;
+            if (grade != null) grade.postExposure.value = 0.35f + 0.9f * strength * k;
+            yield return null;
+        }
+        if (lens != null) lens.intensity.value = 0f;
+        if (chroma != null) chroma.intensity.value = 0.15f;
+        if (grade != null) grade.postExposure.value = 0.35f;
     }
 
     void OnDestroy()
     {
         Active = false;
         Time.timeScale = 1f;
+        if (rpAsset != null)
+        {
+            rpAsset.renderScale = oldRenderScale;
+            rpAsset.msaaSampleCount = oldMsaa;
+            rpAsset.shadowDistance = oldShadowDist;
+        }
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
@@ -100,7 +188,10 @@ public class TrailerDirector : MonoBehaviour
         lookPoint = title != null ? title.position : eye + Vector3.forward * 3f;
         camT.SetPositionAndRotation(eye, Quaternion.LookRotation(lookPoint - eye));
         SetCard(1f, "", "");
+        Music(droneSrc, 0.55f, 4f);
+        Sfx(TrailerAudio.Impact, 0.5f, 0.7f);
         yield return FadeFromBlack(1.5f);
+        Sfx(TrailerAudio.Ting, 0.35f);
         Caption("HAWKINS, INDIANA  -  1986", 3.5f);
         yield return new WaitForSeconds(3f);
 
@@ -121,13 +212,17 @@ public class TrailerDirector : MonoBehaviour
         Vector3 stop = mirror + (eye - mirror).normalized * 0.9f;
         stop.y = eye.y;
         StartCoroutine(Ramp(v => glow.intensity = v * 6f, 3.5f));
+        Sfx(TrailerAudio.Riser(3.75f), 0.8f);
         yield return MoveTo(stop, 3.5f);
         shake = 0.6f;
+        Sfx(TrailerAudio.Whoosh, 0.9f, 0.8f);
         yield return Flash(Color.white, 0.25f);
+        Hit(1.2f, true);
         sg.EnterUpsideDown(); // load Hawkin City (camera persists)
         yield return new WaitUntil(() => cityReady);
 
         // ---------------- CITY (0:12 - 0:47) ----------------
+        armed = true;
         Vector3 P = Eye();
         basePos = P;
         Vector3 fwd = Flat(Camera.main != null ? Camera.main.transform.forward : Vector3.forward);
@@ -135,6 +230,8 @@ public class TrailerDirector : MonoBehaviour
         camT.SetPositionAndRotation(P, Quaternion.LookRotation(lookPoint - P));
         SetCard(1f, "", "");
         StartCoroutine(Lightning(1.2f));
+        arpSrc.time = 0f;
+        Music(arpSrc, 0.35f, 3f);
         yield return FadeFromBlack(1f);
 
         // Slow look around the infested street.
@@ -146,6 +243,9 @@ public class TrailerDirector : MonoBehaviour
         yield return new WaitForSeconds(2.3f);
         P = basePos;
 
+        Sfx(TrailerAudio.Whoosh, 0.8f);
+        yield return new WaitForSeconds(0.9f);
+        Hit(0.8f, true);
         yield return Card("SOMETHING IS HUNTING", "", 2f, 0.85f);
 
         // A Demogorgon claws out of the street ahead... then charges. Open fire.
@@ -154,7 +254,8 @@ public class TrailerDirector : MonoBehaviour
         var d1 = spawner.SpawnAt(PointAt(P, fwd, 9f), DemogorgonType.Normal, true, 1.1f);
         lookPoint = d1.transform.position + Vector3.up * 1.4f;
         GameFx.Play2D(spawnClip, 0.9f);
-        shake = 0.3f;
+        Hit(0.6f);
+        Music(arpSrc, 0.55f, 1.5f);
         yield return new WaitForSeconds(2.2f);
         yield return FireAt(d1.transform, 8, 0.11f);
 
@@ -163,18 +264,26 @@ public class TrailerDirector : MonoBehaviour
         var d2 = spawner.SpawnAt(PointAt(P, left, 5.5f), DemogorgonType.Pouncer, false, 1.3f);
         if (d2.TryGetComponent(out PounceBehaviour pb)) pb.LeapSoon(0.25f);
         GameFx.Play2D(DemogorgonAI.AttackClip, 1f, 0.8f);
+        Hit(1f);
         lookSpeed = 14f;
         lookPoint = d2.transform.position + Vector3.up * 1.2f;
         shake = 1f;
         yield return Track(d2.transform, 0.45f);
-        Time.timeScale = 0.3f; // slow-motion beat
+        Time.timeScale = 0.3f; // slow-motion beat: music drops in pitch
+        arpSrc.pitch = 0.5f;
+        droneSrc.pitch = 0.7f;
+        Sfx(TrailerAudio.Whoosh, 1f, 0.6f);
         yield return Track(d2.transform, 0.25f);
         yield return Slash(d2);
         yield return new WaitForSeconds(0.25f);
         Time.timeScale = 1f;
+        arpSrc.pitch = 1f;
+        droneSrc.pitch = 1f;
         yield return new WaitForSeconds(0.4f);
 
+        Hit(1f, true);
         yield return Card("FIGHT BACK", "", 1.6f, 0.85f);
+        Music(arpSrc, 0.75f, 1f);
 
         // A pack of Runners down the street - mow them down.
         lookSpeed = 6f;
@@ -198,6 +307,7 @@ public class TrailerDirector : MonoBehaviour
         if (lbl != null) lbl.gameObject.SetActive(false);
         lookSpeed = 2.2f;
         lookPoint = beamGate.transform.position + Vector3.up * 12f;
+        Sfx(TrailerAudio.Braam, 0.6f, 0.8f);
         yield return new WaitForSeconds(3f);
 
         // Lightning-lit glimpse of something HUGE. Cut before it is clear.
@@ -209,8 +319,12 @@ public class TrailerDirector : MonoBehaviour
         if (bar != null) Destroy(bar); // no name spoilers
         lookPoint = boss.transform.position + Vector3.up * boss.transform.lossyScale.y * 60f;
         SetSun(Color.black, 0f);
+        Music(arpSrc, 0f, 0.3f); // sudden silence
+        Music(droneSrc, 0.25f, 0.3f);
+        Sfx(heartbeat, 1f, 1.1f);
         yield return new WaitForSeconds(1.2f);
         GameFx.Play2D(DemogorgonAI.AttackClip, 1f, 0.55f);
+        Hit(1.3f, true);
         for (int i = 0; i < 3; i++)
         {
             SetSun(new Color(0.75f, 0.8f, 1f), 2.2f);
@@ -224,10 +338,18 @@ public class TrailerDirector : MonoBehaviour
         SetCard(1f, "", "");
 
         // ---------------- TITLE (0:47 - 1:00) ----------------
-        yield return new WaitForSeconds(0.8f);
-        yield return Card("SAVE THE HAWKINS", "DEMO HUNT", 5.5f, 1f, 1.25f);
-        yield return Card("PLAY NOW", "ON META QUEST", 4.5f, 1f);
+        Sfx(TrailerAudio.Riser(1.2f), 0.9f);
+        yield return new WaitForSeconds(1.2f);
+        Hit(1.5f, true);
+        Music(droneSrc, 0.7f, 0.5f);
+        yield return Card("SAVE THE HAWKINS", "DEMO HUNT", 7f, 1f, 1.15f);
+        Sfx(TrailerAudio.Whoosh, 0.6f, 1.2f);
+        Sfx(TrailerAudio.Ting, 0.5f);
+        yield return Card("PLAY NOW", "ON META QUEST", 5.5f, 1f);
+        Music(droneSrc, 0f, 1f);
         SetCard(1f, "", "");
+        yield return new WaitForSeconds(1f);
+        Finished = true;
         Debug.Log("Trailer finished.");
     }
 
@@ -262,12 +384,13 @@ public class TrailerDirector : MonoBehaviour
             bar.transform.localPosition = new Vector3(0f, s * 0.395f, 0.62f);
         }
 
-        cardTitle = CardText("Title", 1.05f, new Color(1f, 0.1f, 0.06f), 0.5f);
+        // HDR face colours: stay bright through the ACES grade and bloom into a neon glow.
+        cardTitle = CardText("Title", 0.85f, new Color(1f, 0.16f, 0.1f) * 4f, new Color(1f, 0.1f, 0.05f, 0.9f), 0.12f, new Color32(255, 90, 60, 255));
         cardTitle.transform.localPosition = new Vector3(0f, 0.03f, 0.58f);
-        cardSub = CardText("Sub", 0.32f, new Color(0.92f, 0.92f, 0.92f), 0.3f);
+        cardSub = CardText("Sub", 0.32f, new Color(1f, 0.97f, 0.94f) * 2.2f, new Color(1f, 0.6f, 0.5f, 0.35f), 0.1f, new Color32(20, 0, 0, 255));
         cardSub.transform.localPosition = new Vector3(0f, -0.11f, 0.58f);
         cardSub.characterSpacing = 30f;
-        caption = CardText("Caption", 0.22f, new Color(0.95f, 0.95f, 0.95f), 0.25f);
+        caption = CardText("Caption", 0.22f, new Color(1f, 0.97f, 0.94f) * 2.2f, new Color(1f, 1f, 1f, 0.3f), 0.1f, new Color32(10, 0, 0, 255));
         caption.transform.localPosition = new Vector3(0f, -0.28f, 0.58f);
         caption.characterSpacing = 25f;
         SetCard(0f, "", "");
@@ -296,6 +419,7 @@ public class TrailerDirector : MonoBehaviour
         bloom.scatter.Override(0.8f);
         bloom.tint.Override(new Color(1f, 0.85f, 0.8f));
         var ca = p.Add<ColorAdjustments>(true);
+        grade = ca;
         ca.contrast.Override(25f);
         ca.saturation.Override(-10f);
         ca.postExposure.Override(0.35f);
@@ -309,18 +433,31 @@ public class TrailerDirector : MonoBehaviour
         var grain = p.Add<FilmGrain>(true);
         grain.type.Override(FilmGrainLookup.Medium2);
         grain.intensity.Override(0.3f);
-        p.Add<ChromaticAberration>(true).intensity.Override(0.15f);
+        chroma = p.Add<ChromaticAberration>(true);
+        chroma.intensity.Override(0.15f);
+        lens = p.Add<LensDistortion>(true);
+        lens.intensity.Override(0f);
+        var mb = p.Add<MotionBlur>(true);
+        mb.mode.Override(MotionBlurMode.CameraOnly);
+        mb.quality.Override(MotionBlurQuality.High);
+        mb.intensity.Override(0.35f);
     }
 
-    TextMeshPro CardText(string n, float size, Color c, float outline)
+    TextMeshPro CardText(string n, float size, Color hdrFace, Color glow, float outline, Color32 outlineColor)
     {
-        var t = GameHUD.CreateText(n, size, c, new Vector2(1.4f, 0.4f), camT);
+        var t = GameHUD.CreateText(n, size, Color.white, new Vector2(1.4f, 0.4f), camT);
         if (font != null) t.font = font;
         t.fontStyle = FontStyles.Normal;
-        t.outlineWidth = outline;
-        t.outlineColor = new Color32(40, 0, 0, 255);
         t.textWrappingMode = TextWrappingModes.NoWrap;
         t.characterSpacing = 8f;
+        var m = t.fontMaterial; // per-text instance
+        m.SetColor("_FaceColor", hdrFace);
+        m.EnableKeyword("GLOW_ON");
+        m.SetColor("_GlowColor", glow);
+        m.SetFloat("_GlowOuter", 0.35f);
+        m.SetFloat("_GlowPower", 0.6f);
+        t.outlineWidth = outline;
+        t.outlineColor = outlineColor;
         return t;
     }
 
@@ -356,7 +493,7 @@ public class TrailerDirector : MonoBehaviour
         if (model == null) return;
         swordPivot = new GameObject("FP Sword Pivot").transform;
         swordPivot.SetParent(camT, false);
-        swordPivot.localPosition = new Vector3(-0.22f, -0.28f, 0.3f);
+        swordPivot.localPosition = new Vector3(-0.27f, -0.36f, 0.34f);
         swordRest = Quaternion.Euler(-35f, 15f, 20f);
         swordPivot.localRotation = swordRest;
 
@@ -375,7 +512,7 @@ public class TrailerDirector : MonoBehaviour
         m.transform.localRotation = s.x >= s.y && s.x >= s.z ? Quaternion.FromToRotation(Vector3.right, Vector3.up)
             : s.z >= s.y ? Quaternion.FromToRotation(Vector3.forward, Vector3.up) : Quaternion.identity;
         b = BoundsIn(m, swordPivot);
-        m.transform.localScale *= 0.85f / Mathf.Max(0.001f, b.size.y);
+        m.transform.localScale *= 0.7f / Mathf.Max(0.001f, b.size.y);
         b = BoundsIn(m, swordPivot);
         m.transform.localPosition -= new Vector3(b.center.x, b.min.y + 0.1f, b.center.z); // grip at pivot, blade up
     }
@@ -512,8 +649,10 @@ public class TrailerDirector : MonoBehaviour
         for (float e = 0f; e < t; e += Time.deltaTime)
         {
             float a = Mathf.Clamp01(e / fade) * Mathf.Clamp01((t - e) / fade);
-            // Title slowly grows for drama.
+            // Title slowly grows, letters track in; main title flickers on like a dying neon.
             cardTitle.transform.localScale = Vector3.one * titleScale * (1f + e / t * 0.06f);
+            cardTitle.characterSpacing = 6f + 18f * Mathf.Exp(-e * 3f);
+            if (titleScale > 1f && e < 0.7f && Random.value < 0.35f) a *= 0.15f;
             SetCard(Mathf.Max(a * bgAlpha, cardBg.enabled && bgAlpha >= 1f ? 1f : 0f), title, sub, a);
             yield return null;
         }
@@ -524,6 +663,9 @@ public class TrailerDirector : MonoBehaviour
     {
         cardBg.material.color = new Color(0f, 0f, 0f, bgAlpha);
         cardBg.enabled = bgAlpha > 0.001f;
+        bool showHands = armed && bgAlpha < 0.6f; // rifle/sword sit in front of the card plane
+        if (gunModel != null) gunModel.gameObject.SetActive(showHands);
+        if (swordPivot != null) swordPivot.gameObject.SetActive(showHands);
         cardTitle.text = title;
         cardSub.text = sub;
         cardTitle.alpha = textAlpha;
@@ -604,6 +746,20 @@ public class TrailerDirector : MonoBehaviour
             Field<AudioSource>(fade, "thunderSound")?.Play();
         }
         StartCoroutine(CitySetup());
+    }
+
+    void Update()
+    {
+        if (!cityReady) return;
+        // Enemy health bars, and the player-rig panels (HellFire Points, health, timer...),
+        // which stay with the hidden VR head instead of the trailer camera. Runtime only:
+        // nothing is saved, so they are back to normal outside the trailer.
+        Transform rig = Camera.main != null ? Camera.main.transform.root : null;
+        foreach (var c in FindObjectsByType<Canvas>(FindObjectsSortMode.None))
+            if (c.name.StartsWith("Health Canvas") || (rig != null && c.transform.IsChildOf(rig))) c.enabled = false;
+        foreach (var n in new[] { "scoreText", "scoreText2", "scoreText3" })
+            if (Field<TextMeshProUGUI>(UIManager.Instance, n) is TextMeshProUGUI t)
+                foreach (var c in t.GetComponentsInParent<Canvas>(true)) c.enabled = false;
     }
 
     IEnumerator CitySetup()
