@@ -1,7 +1,7 @@
 # Vecna's Curse (Part 2): Development Progress
 
-Overall estimated progress: **about 10%** (audit, scene setup, small props; no environment or gameplay built).
-Current phase: **Phase 2. Milestones 1 and 2 done, subject to the door re-run. Waiting for approval of Milestone 3.**
+Overall estimated progress: **about 15%** (audit, scene setup, small props, Creel House exterior model; no gameplay built).
+Current phase: **Phase 2. Milestones 1 to 3 done. Waiting for approval of Milestone 4.**
 
 ## Session log
 
@@ -75,9 +75,20 @@ Build details:
 - Still heavy, not reduced: grandfather clock (40,722 triangles).
 - Not done: LOD groups, Rigidbody and grab setup (planned with gameplay), door hinge pivot.
 
-### Session 4 (2026-11-05): Milestone 3, Creel House exterior (in progress)
+### Session 4 (2026-11-05): Milestone 3, Creel House exterior
 
-Status: **reduced model built and previewed in Blender. Unity builder compile-checked, not yet run in the Editor.**
+Status: **builder run in the Editor and saved results verified. Owner visual check reported only as "done". Not tested in a headset.**
+
+Verified from `Editor.log` and saved files:
+
+- Log shows `Milestone 3 Creel House build finished`, with no builder errors and no `error CS` lines.
+- Imported triangles: LOD0 65,602, LOD1 38,126, LOD2 8,155. LODGroup present.
+- Size 13.18 x 17.12 x 16 m, lowest point y 0. Door marker (0, 1.70, -2.94), so the door side faces -Z.
+- 10 materials created and remapped. Base diffuse confirmed at Android ASTC 8x8, max 1024.
+- Door fix applied: door is now 0.967 x 2.05 x 0.139 m.
+- Scene holds `VC_CreelHouse_Exterior` at z = 15, plus the rig and prop lineup.
+
+Build details:
 
 - Owner decisions: Blender yes, commit yes, cleanup yes, original boss. The downloaded Vecna model stays out of Part 2 and remains on disk. The two mp3 files were not touched.
 - Commits: work is on branch `vecna-curse`, created from `main`. Not pushed. The owner had already committed the folder move and Milestones 1 and 2 to `main`.
@@ -190,4 +201,4 @@ Later phases follow the master brief: gameplay, enemies, VFX and audio, UI, opti
 
 ## Recommended next milestone
 
-Milestone 3: reduce and prefab the Creel House and decide the interior strategy. It depends on the Blender decision.
+Milestone 4: Hawkins street blockout with fog and lighting.
