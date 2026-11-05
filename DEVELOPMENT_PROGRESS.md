@@ -44,6 +44,25 @@ Details of the work:
   - Adds `TEMP_SpawnGround_Placeholder` (60 x 60 m, temporary) and dark placeholder lighting.
 - Known limits: no gun in this scene yet, no in-scene way back to Home, and the player can walk off the placeholder ground.
 
+### Session 3 (2026-11-05): Milestone 2, small prop setup (in progress)
+
+Status: **code written and compile-checked outside Unity. Builder not yet run in the Editor.**
+
+- Milestone 1 test: owner replied "done"; treated as passed, without detail on tile click or locomotion.
+- Unity MCP: `claude mcp list` shows `UnityMCP` connected at `http://127.0.0.1:8080/mcp`, and `com.coplaydev.unity-mcp` is installed. Its tools are not loaded in this Claude Code session, so a restart is needed before they can be used.
+- The package tracks the moving `#main` branch. Pin a release before relying on it.
+- Script created: `Assets/VecnaCurse/Scripts/Editor/VecnaCursePropBuilder.cs` (menu: `Save The Hawkins > Vecna Curse > Run Milestone 2 Prop Build`).
+- The builder does the following when run:
+  - Sets model import options: no cameras, lights, animation or blend shapes; not readable; low mesh compression.
+  - Sets Android texture overrides on used textures: ASTC 6x6, max 512 or 1024.
+  - Creates Simple Lit materials in `Assets/VecnaCurse/Materials/Props/`.
+  - Creates six prefabs in `Assets/VecnaCurse/Prefabs/Props/`, each scaled to real-world size with a box collider.
+  - Hides the wall clock glass and the third-party brand text meshes on the cassette player.
+  - Adds `TEMP_PropLineup` to the Vecna Curse scene for a visual check.
+- Unverified until viewed: FBX orientation; CRT and cassette material-to-slot mapping (inferred, not read from FBX connections).
+- Still heavy, not reduced: grandfather clock (40,722 triangles), cassette player (11,215 triangles, before hidden parts).
+- Not done: LOD groups, Rigidbody and grab setup (planned with gameplay), door hinge pivot.
+
 ## Audit findings
 
 ### Tooling

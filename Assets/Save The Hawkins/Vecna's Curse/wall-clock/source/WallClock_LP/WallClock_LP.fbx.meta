@@ -3,7 +3,27 @@ guid: 861721f23e81e44fe83d9999e01398a1
 ModelImporter:
   serializedVersion: 24300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black_Pointer
+    second: {fileID: 2100000, guid: 8a0674774102c4cc698b035e5920de5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Clock
+    second: {fileID: 2100000, guid: fc6765aa29e8d492ca5338d2c17347cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: ac18beedb9f394c7a9766a4a07330f30, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red_Pointer
+    second: {fileID: 2100000, guid: d311d1c8aff6d4305a8bdbdbf5210153, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -35,15 +55,15 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 1
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 1
     importVisibility: 1
-    importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
@@ -80,7 +100,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 1
+  importAnimation: 0
   humanDescription:
     serializedVersion: 3
     human: []
@@ -99,7 +119,7 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
