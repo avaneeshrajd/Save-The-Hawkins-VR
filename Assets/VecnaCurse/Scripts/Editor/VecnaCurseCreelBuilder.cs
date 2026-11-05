@@ -23,7 +23,7 @@ public static class VecnaCurseCreelBuilder
     const float BodyDepth = 9.8f;
     const float BodyHeight = 15.9f;
 
-    static readonly Vector3 ScenePosition = new Vector3(0f, 0f, 15f);
+    static readonly Vector3 ScenePosition = new Vector3(0f, 0f, 138f);
     static readonly float[] LodTransitions = { 0.4f, 0.15f, 0.03f };
 
     struct Surface

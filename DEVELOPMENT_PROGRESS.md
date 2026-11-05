@@ -1,7 +1,7 @@
 # Vecna's Curse (Part 2): Development Progress
 
-Overall estimated progress: **about 15%** (audit, scene setup, small props, Creel House exterior model; no gameplay built).
-Current phase: **Phase 2. Milestones 1 to 3 done. Waiting for approval of Milestone 4.**
+Overall estimated progress: **about 20%** (audit, scene setup, small props, Creel House exterior model, Hawkins street foundation; no gameplay built).
+Current phase: **Phase 2. Milestones 1 to 4 done. Waiting for approval of Milestone 5.**
 
 ## Session log
 
@@ -102,6 +102,37 @@ Build details:
 - Created `Assets/VecnaCurse/Scripts/Editor/VecnaCurseCreelBuilder.cs` (menu: `Save The Hawkins > Vecna Curse > Run Milestone 3 Creel House Build`). It re-runs the prop build for the door yaw fix.
 - Not done: walkable porch and stairs (body box collider only), lighting, license verification of the house model.
 
+### Session 5 (2026-11-05): Milestone 4, Hawkins street foundation
+
+Status: **built and checked through UnityMCP in the Editor, including a Play Mode collision test. Not tested in a headset. No Quest measurements.**
+
+- UnityMCP: connected to this project and used for builds, console checks, screenshots and Play Mode.
+- Built by `VecnaCurseHawkinsBuilder.cs` (menu: `Save The Hawkins > Vecna Curse > Run Milestone 4 Hawkins Build`), with models from `Tools/Blender/hawkins_env.py`.
+- Terrain: `VC_Terrain`, 7,200-triangle mesh with collider, flat in the play area, rising to hills. A mesh was used instead of Unity Terrain to keep rendering cheap.
+- Sky: original procedural night sky with moon, stars, cloud and low red glow, as a cubemap skybox.
+- Atmosphere: linear fog 12 to 135 m. Moon directional light without shadows. Flat ambient.
+- Street, running along +Z from spawn to the Creel House (moved to z = 138):
+  - Road, sidewalks and dirt path.
+  - 6 reused American houses, reduced from 16,951 to LOD0 7,000 and LOD1 1,500 triangles, facing the road. Decal faces removed to avoid alpha cutout.
+  - 5 original streetlights with emissive lens and additive ground glow. They do not cast real light.
+  - 34 original dead trees, 454 triangles each.
+  - Invisible play bounds.
+- Removed `TEMP_SpawnGround_Placeholder` and `TEMP_PropLineup`. The prop prefabs remain but are not placed. The prop builder no longer creates the lineup.
+- Bug found and fixed: streetlights were upside down because of a 180-degree rotation case.
+
+Testing performed:
+
+- Console: no errors after the final build.
+- Scene counts: XROrigin 1, AudioListener 1, EventSystem 1.
+- Play Mode with direct `CharacterController.Move` calls: rig stays on terrain; moves along road; stops at house collider (x = -9.49), left bound (x = -23.32) and Creel body (z = 134.88). Controller input not tested.
+- Ground raycasts hit `VC_Terrain` at four sampled points.
+- Screenshots checked from several street positions, using desktop cameras.
+- Worst-case triangles if every LOD0 were visible at once: 144,372. Actual frame cost and draw calls not measured.
+
+Side effect on Part 1: Android overrides were set on textures shared with Hawkin City: `american_house_DIFF` (max 1024, ASTC 8x8), `RoadLines` (max 1024), `Grass02` and `Sidewalk01` (max 512). Check Demo Hunt visuals on Quest.
+
+Not done yet: abandoned cars, bicycles, poles and wires, broken windows, leaves, newspapers, posters, radios, floating particles, red emergency lighting, red lightning, light flicker. Baked lighting not attempted.
+
 ## Audit findings
 
 ### Tooling
@@ -181,14 +212,17 @@ Items 1 and 2 used recommended defaults in Session 2: editor-script builders, sc
 3. Removal of duplicate source files from `Assets/`.
 4. Install Blender for mesh reduction.
 
-## Proposed milestones (each about 5%, Phase 2 begins after approval)
+## Proposed milestones (each about 5%)
 
-1. Set up the scene: rename, Build Settings, XR rig, spawn, Home `Vecna's Curse` button, folder structure.
-2. Configure imports and prefabs for props: scale, compression, colliders.
-3. Reduce and prefab the Creel House. Decide interior strategy.
-4. Build the Hawkins street blockout with fog and lighting.
-5. Build the Creel House exterior, then interior rooms.
-6. Build the Upside Down, then the Mindscape arena.
+1. Done: scene setup.
+2. Done: small prop setup.
+3. Done: Creel House exterior model.
+4. Done: Hawkins terrain, sky, fog, street.
+5. Hawkins set dressing: cars, bicycles, poles and wires, debris, posters, ash particles.
+6. Creel House grounds and walkable porch.
+7. Creel House interior rooms, as a separate modular set.
+8. Upside Down environment and sky.
+9. Mindscape arena and sky.
 
 Later phases follow the master brief: gameplay, enemies, VFX and audio, UI, optimization.
 
@@ -201,4 +235,4 @@ Later phases follow the master brief: gameplay, enemies, VFX and audio, UI, opti
 
 ## Recommended next milestone
 
-Milestone 4: Hawkins street blockout with fog and lighting.
+Milestone 5: Hawkins set dressing: cars, bicycles, poles and wires, debris, posters, ash particles.

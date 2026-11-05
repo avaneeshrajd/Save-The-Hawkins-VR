@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Milestone 2: configures small prop imports for Quest and builds their prefabs.
@@ -13,8 +12,6 @@ public static class VecnaCursePropBuilder
     const string SourceRoot = "Assets/Save The Hawkins/Vecna's Curse/";
     const string MaterialFolder = "Assets/VecnaCurse/Materials/Props";
     const string PrefabFolder = "Assets/VecnaCurse/Prefabs/Props";
-    const string VecnaSceneGuid = "1a6c1a3dc077547c782db1ad2f309ed5";
-    const string LineupName = "TEMP_PropLineup";
     const string MaterialPrefix = "VC_Prop_";
 
     class Slot
@@ -147,7 +144,6 @@ public static class VecnaCursePropBuilder
         }
 
         AssetDatabase.SaveAssets();
-        PlaceLineup(prefabs);
 
         if (failures == 0)
             Debug.Log($"[VecnaCurse] Milestone 2 prop build finished: {prefabs.Count} prefabs.");
@@ -295,34 +291,6 @@ public static class VecnaCursePropBuilder
         importer.SaveAndReimport();
 
         return AssetDatabase.LoadAssetAtPath<Texture2D>(path);
-    }
-
-    /// <summary>Temporary row in the Vecna Curse scene so scale and orientation can be checked.</summary>
-    static void PlaceLineup(List<GameObject> prefabs)
-    {
-        Scene scene = EditorSceneManager.OpenScene(AssetDatabase.GUIDToAssetPath(VecnaSceneGuid), OpenSceneMode.Single);
-
-        foreach (GameObject existing in scene.GetRootGameObjects())
-        {
-            if (existing.name == LineupName) Object.DestroyImmediate(existing);
-        }
-
-        var lineup = new GameObject(LineupName);
-        SceneManager.MoveGameObjectToScene(lineup, scene);
-
-        const float spacing = 1.5f;
-        float x = -spacing * (prefabs.Count - 1) * 0.5f;
-        foreach (GameObject prefab in prefabs)
-        {
-            var instance = (GameObject)PrefabUtility.InstantiatePrefab(prefab, lineup.transform);
-            bool floorPivot = instance.GetComponent<BoxCollider>().center.y > 0.01f;
-            instance.transform.localPosition = new Vector3(x, floorPivot ? 0f : 1.2f, 3f);
-            instance.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
-            x += spacing;
-        }
-
-        EditorSceneManager.MarkSceneDirty(scene);
-        EditorSceneManager.SaveScene(scene);
     }
 
     static bool TryGetBounds(GameObject instance, out Bounds bounds)
