@@ -74,6 +74,11 @@ public class StartGame : MonoBehaviour
         upsideDownGate.SetActive(true);
     }
 
+    public void OnVecnaCurseClick()
+    {
+        SceneManager.LoadScene("Vecna Curse");
+    }
+
     public void OnBackBtnClick()
     {
         modesPanel.SetActive(false);
