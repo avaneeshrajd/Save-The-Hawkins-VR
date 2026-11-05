@@ -34,6 +34,7 @@ public static class VecnaCursePropBuilder
         public int MaxTextureSize;
         public bool PivotAtFloor;
         public bool ExpectTall;
+        public float ModelYaw; // Turns the model so its broad face points along Z.
         public Slot[] Slots;
         public Slot UnnamedSlot; // For an FBX with no materials of its own.
         public string[] HiddenParts = new string[0];
@@ -44,7 +45,7 @@ public static class VecnaCursePropBuilder
         new Prop
         {
             Name = "LockedDoor", Fbx = "Locked door/source/Door.fbx",
-            LongestSizeMeters = 2.05f, MaxTextureSize = 1024, PivotAtFloor = true, ExpectTall = true,
+            LongestSizeMeters = 2.05f, MaxTextureSize = 1024, PivotAtFloor = true, ExpectTall = true, ModelYaw = 90f,
             Slots = new[]
             {
                 new Slot
@@ -183,6 +184,7 @@ public static class VecnaCursePropBuilder
         try
         {
             var instance = (GameObject)PrefabUtility.InstantiatePrefab(model, root.transform);
+            instance.transform.localRotation = Quaternion.Euler(0f, prop.ModelYaw, 0f) * instance.transform.localRotation;
 
             foreach (Transform part in instance.GetComponentsInChildren<Transform>(true))
             {

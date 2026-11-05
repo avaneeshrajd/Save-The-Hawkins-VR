@@ -1,7 +1,7 @@
 # Vecna's Curse (Part 2): Development Progress
 
-Overall estimated progress: **about 5%** (audit and scene setup; no environment or gameplay built).
-Current phase: **Phase 2 started. Milestone 1 awaits Play Mode confirmation.**
+Overall estimated progress: **about 10%** (audit, scene setup, small props; no environment or gameplay built).
+Current phase: **Phase 2. Milestones 1 and 2 done, subject to the door re-run. Waiting for approval of Milestone 3.**
 
 ## Session log
 
@@ -44,15 +44,27 @@ Details of the work:
   - Adds `TEMP_SpawnGround_Placeholder` (60 x 60 m, temporary) and dark placeholder lighting.
 - Known limits: no gun in this scene yet, no in-scene way back to Home, and the player can walk off the placeholder ground.
 
-### Session 3 (2026-11-05): Milestone 2, small prop setup (in progress)
+### Session 3 (2026-11-05): Milestone 2, small prop setup
 
-Status: **code written and compile-checked outside Unity. Builder not yet run in the Editor.**
+Status: **builder run in the Editor and saved results verified. One re-run needed for the door yaw fix. Owner visual check reported only as "done".**
+
+Verified from `Editor.log` and saved files:
+
+- Log shows `Milestone 2 prop build finished: 6 prefabs`, and 6 prefabs and 12 materials exist. The scene holds the rig plus 6 lineup instances.
+- Final sizes in metres: door 0.139 x 2.05 x 0.967, wall clock 0.45 x 0.45 x 0.036, flashlight 0.066 x 0.066 x 0.24, CRT 0.6 x 0.39 x 0.318, grandfather clock 0.422 x 2.2 x 0.345, cassette player 0.229 x 0.25 x 0.06.
+- Triangles as built: door 1,580, wall clock 640, flashlight 688, CRT 3,812, grandfather clock 40,722, cassette player 4,487 (brand text meshes hidden).
+- Sampled imports confirm cameras, lights and blend shapes off, and door albedo at Android ASTC 6x6, max 1024.
+- `Editor.log` also shows terrain template shader dependency lines from URP and Shader Graph packages. They do not come from this work.
+
+Door yaw fix: the log showed the door's broad face along X, so `ModelYaw = 90` was added and compile-checked. It takes effect after the next builder run. Which side is the front is unverified.
+
+Build details:
 
 - Milestone 1 test: owner replied "done"; treated as passed, without detail on tile click or locomotion.
 - Unity MCP: `claude mcp list` shows `UnityMCP` connected at `http://127.0.0.1:8080/mcp`, and `com.coplaydev.unity-mcp` is installed. Its tools are not loaded in this Claude Code session, so a restart is needed before they can be used.
 - The package tracks the moving `#main` branch. Pin a release before relying on it.
 - Script created: `Assets/VecnaCurse/Scripts/Editor/VecnaCursePropBuilder.cs` (menu: `Save The Hawkins > Vecna Curse > Run Milestone 2 Prop Build`).
-- The builder does the following when run:
+- The builder did the following:
   - Sets model import options: no cameras, lights, animation or blend shapes; not readable; low mesh compression.
   - Sets Android texture overrides on used textures: ASTC 6x6, max 512 or 1024.
   - Creates Simple Lit materials in `Assets/VecnaCurse/Materials/Props/`.
@@ -60,8 +72,24 @@ Status: **code written and compile-checked outside Unity. Builder not yet run in
   - Hides the wall clock glass and the third-party brand text meshes on the cassette player.
   - Adds `TEMP_PropLineup` to the Vecna Curse scene for a visual check.
 - Unverified until viewed: FBX orientation; CRT and cassette material-to-slot mapping (inferred, not read from FBX connections).
-- Still heavy, not reduced: grandfather clock (40,722 triangles), cassette player (11,215 triangles, before hidden parts).
+- Still heavy, not reduced: grandfather clock (40,722 triangles).
 - Not done: LOD groups, Rigidbody and grab setup (planned with gameplay), door hinge pivot.
+
+### Session 4 (2026-11-05): Milestone 3, Creel House exterior (in progress)
+
+Status: **reduced model built and previewed in Blender. Unity builder compile-checked, not yet run in the Editor.**
+
+- Owner decisions: Blender yes, commit yes, cleanup yes, original boss. The downloaded Vecna model stays out of Part 2 and remains on disk. The two mp3 files were not touched.
+- Commits: work is on branch `vecna-curse`, created from `main`. Not pushed. The owner had already committed the folder move and Milestones 1 and 2 to `main`.
+- Cleanup: 40 files removed (182 MB): zips, `hauntedhouse.blend`, `hauntedhouse.obj`, `.DS_Store`, same-named duplicate textures. Also removed `Backups/`. Tracked files can be restored from git history.
+- Blender 5.2.3 installed with Homebrew.
+- Finding: the model is a hollow shell with no interior rooms, 16 x 13.18 x 17.12 m, with its front along Blender +X.
+- Interior decision (recommended default, reversible): build the seven rooms as a separate modular set, entered from the front door with a fade transition. The exterior can then be disabled while inside.
+- Created `Tools/Blender/creel_reduce.py`, which outputs `Assets/VecnaCurse/Environments/CreelHouse/CreelHouse.fbx`:
+  - Triangles: source 216,735; LOD0 65,625; LOD1 38,145; LOD2 8,173. LOD1 is higher than planned.
+  - Roof fence removed to avoid alpha cutout. Lowest point at ground level. Door marker included.
+- Created `Assets/VecnaCurse/Scripts/Editor/VecnaCurseCreelBuilder.cs` (menu: `Save The Hawkins > Vecna Curse > Run Milestone 3 Creel House Build`). It re-runs the prop build for the door yaw fix.
+- Not done: walkable porch and stairs (body box collider only), lighting, license verification of the house model.
 
 ## Audit findings
 
@@ -162,4 +190,4 @@ Later phases follow the master brief: gameplay, enemies, VFX and audio, UI, opti
 
 ## Recommended next milestone
 
-Milestone 2: configure imports and prefabs for the small props, after Milestone 1 passes Play Mode.
+Milestone 3: reduce and prefab the Creel House and decide the interior strategy. It depends on the Blender decision.
